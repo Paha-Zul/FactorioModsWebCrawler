@@ -7,7 +7,6 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 
 /**
@@ -16,15 +15,10 @@ import java.util.ArrayList;
  */
 public class Crawler {
 
-    private static volatile String[] filterNames;
-    private static volatile ArrayList<ArrayList<String[]>> modInfos = new ArrayList<>();
+    private volatile String[] filterNames;
+    private volatile ArrayList<ArrayList<String[]>> modInfos = new ArrayList<>();
 
-    public static void main(String[] args) throws SQLException, IOException {
-        processPage("http://www.factoriomods.com/", false);
-        System.out.println("done");
-    }
-
-    private static ArrayList<ArrayList<String[]>> processPage(String url, boolean multi){
+    private ArrayList<ArrayList<String[]>> processPage(String url, boolean multi){
         Document doc = null;
         int i=0;
         Thread[] threads = null;
@@ -41,11 +35,11 @@ public class Crawler {
                 //If we are trying to multithread, then call it on a thread
                 if(multi) {
                     final int k = i;
-                    Runnable task2 = () -> getModsInFilter(filter, k);
+                    Runnable task2 = () -> getModsInFilter(filter, k, 99999);
                     threads[i] = new Thread(task2);
                     threads[i].start();
                 }else{
-                    getModsInFilter(filter, i);
+                    getModsInFilter(filter, i, 99999);
                 }
 
                 i++;
@@ -69,13 +63,13 @@ public class Crawler {
         return modInfos;
     }
 
-    private static void getModsInFilter(Element filter, int index){
+    private void getModsInFilter(Element filter, int index, int pages){
         String filterURL = filter.child(0).attr("abs:href"); //Get the absolute address for the filter.
         filterNames[index] = filter.child(0).text(); //Get the filter name "ie: science"
-        modInfos.add(getModInfo(filterURL)); //Get the mod info from the web address.
+        modInfos.add(getModInfo(filterURL, pages)); //Get the mod info from the web address.
     }
 
-    private static ArrayList<String[]> getModInfo(String url){
+    private ArrayList<String[]> getModInfo(String url, int pages){
         Document doc;
         ArrayList<String[]> names = new ArrayList<>();
         int i = 0;
@@ -126,7 +120,7 @@ public class Crawler {
             Elements nextButtons = doc.select("[rel=next"); //Get all the 'mod' elements
             for(Element next : nextButtons){
                 if (next.text().contains("Next"))
-                    names.addAll(getModInfo(next.attr("abs:href")));
+                    names.addAll(getModInfo(next.attr("abs:href"), pages));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -135,7 +129,7 @@ public class Crawler {
         return names;
     }
 
-    private static void printToFile(String[] filterNames, ArrayList<ArrayList<String[]>> modInfos){
+    private void printToFile(String[] filterNames, ArrayList<ArrayList<String[]>> modInfos){
         PrintWriter writer = null;
         try {
             writer = new PrintWriter("modlist.txt", "UTF-8");
