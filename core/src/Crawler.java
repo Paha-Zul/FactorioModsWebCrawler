@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Paha on 11/10/2015.
- * Crawls a website for info.
+ * Crawls a website for info. Cool.
  */
 public class Crawler {
 
