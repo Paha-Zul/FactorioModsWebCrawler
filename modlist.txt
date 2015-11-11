@@ -1,0 +1,806 @@
+All (204)
+	0) Diesel Generator, 6 days ago, v0.12.x, Klonan
+	1) Torches, 20 days ago, v0.12.x, Klonan
+	2) Burner Generator, 21 days ago, v0.12.x, Klonan
+	3) Oil Steam Boiler, 22 days ago, v0.12.x, Klonan
+	4) Wind Turbine, 26 days ago, v0.12.x, Klonan
+	5) Galactic Trade Mod, about 2 months ago, v0.12.x, coopmaster
+	6) WaiTex, about 2 months ago, v0.12.x, keyboardhack
+	7) Equivalent Exchange, about 2 months ago, v0.12.x, matjojo
+	8) Rail Tanker, 2 months ago, v0.11.x-0.12.x, JamesOFarrell
+	9) Bob's Metals, Chemicals and Intermediates mod, 2 months ago, v0.12.x, bobingabout
+	10) Bob's mod - Ores, 2 months ago, v0.11.x-0.12.x, bobingabout
+	11) Lua Combinators, 2 months ago, v0.12.x, JamesOFarrell
+	12) Steel Manufacturing Unit, 3 months ago, v0.12.x, Klonan
+	13) Burner Manufacturing Unit, 3 months ago, v0.12.x, Klonan
+	14) No Hand Crafting, 3 months ago, v0.11.x-0.12.x, y.petremann
+	15) Better Vehicle Control, 3 months ago, v0.11.x-0.12.x, y.petremann
+	16) No Hand Mining, 3 months ago, v0.11.x-0.12.x, y.petremann
+	17) Bergius Process, 3 months ago, v0.12.x, Klonan
+	18) Updated Graphics, 3 months ago, v0.11.x-0.12.x, y.petremann
+	19) Ghosts From the Start, 3 months ago, v0.11.x-0.12.x, Schmendrick
+	20) Ghosts From the Start, 3 months ago, v0.11.x-0.12.x, Schmendrick
+	21) Cursed Jet Pack, 3 months ago, v0.12.x, L0771
+	22) Aircraft, 3 months ago, v0.12.x, Eldwen
+	23) Cursed PI, 3 months ago, v0.12.x, L0771
+	24) Cursed Underground Transport, 3 months ago, v0.11.x-0.12.x, L0771
+	25) Bucket Wheel Excavator, 4 months ago, v0.11.x-0.12.x, jorgenRe
+	26) Pocket Bots Start, 4 months ago, v0.12.x, vampiricdust
+	27) Landfill, 4 months ago, v0.11.x-0.12.x, Rseding91
+	28) Equalizer chests, 4 months ago, v0.11.x-0.12.x, Boogieman14
+	29) Advanced Equipment, 4 months ago, v0.12.x, jorgenRe
+	30) Pneumatic Tubes, 4 months ago, v0.11.x-0.12.x, jorgenRe
+	31) Fluid Void, 4 months ago, v0.11.x-0.12.x, Rseding91
+	32) Transformator, 4 months ago, v0.11.x-0.12.x, Gotbread
+	33) Explosive Termites, 4 months ago, v0.11.x-0.12.x, Rseding91
+	34) Compression Chests, 4 months ago, v0.11.x-0.12.x, Rseding91
+	35) Filter Inserter, 4 months ago, v0.12.x, laige
+	36) Ore Expansion, 4 months ago, v0.10.x-0.12.x, Rseding91
+	37) The Fat Controller, 4 months ago, v0.11.x-0.12.x, JamesOFarrell
+	38) More Light, 4 months ago, v0.11.x-0.12.x, JamesOFarrell
+	39) Hebrew RTL Fixer/Inverter, 4 months ago, v0.12.x, Dev-iL
+	40) Long Large Chests, 4 months ago, v0.11.x, johanwanderer
+	41) Stackers, 4 months ago, v0.11.x, dalsio
+	42) Pocket Bots, 4 months ago, v0.11.x, JamesOFarrell
+	43) Lishgets TMod, 4 months ago, v0.11.x, Lishget
+	44) Electric boiler, 4 months ago, v0.11.x, johanwanderer
+	45) AeroTech Storage, 4 months ago, v0.11.x, ArkeousAero
+	46) Factorio Sprachverbesserung, 4 months ago, v0.11.x, Lishget
+	47) Packaged Items, 4 months ago, v0.11.x, TheBauwssss
+	48) Natural Evolution, 5 months ago, v0.11.x, TheSAguy
+	49) Autofill, 5 months ago, v0.11.x, rk84
+	50) Displaying range of turrets, 5 months ago, v0.11.x, kds71
+	51) Visual Help, 5 months ago, v0.11.x, y.petremann
+	52) Rail Crossing, 5 months ago, v0.11.x, Kikkers
+	53) Recipe Clipboard, 5 months ago, v0.11.x, leflings
+	54) Cursed Exp, 5 months ago, v0.11.x, L0771
+	55) Science pack prerequisites, 5 months ago, v0.11.x, ThaPear
+	56) Electricity by XyLe, 5 months ago, v0.11.x, XyLe
+	57) Turret range/armor upgrades, 5 months ago, v0.11.x, ThaPear
+	58) Just Another No Hand Crafting Mod, 5 months ago, v0.11.x, ErnieVanDyke
+	59) JohnRipley's Tweakmod, 5 months ago, v0.11.x, JohnRipley
+	60) Big Wooden Power Pole, 5 months ago, v0.11.x-0.12.x, Klonan
+	61) Flying Boots, 5 months ago, v0.11.x, giodamelio
+	62) No Hand Crafting, 5 months ago, v0.11.x, Fentus
+	63) SpeedControl, 5 months ago, v0.11.x, Fentus
+	64) Fuel Farmer, 5 months ago, v0.11.x, Fentus
+	65) Belts Are Broken, 5 months ago, v0.11.x, Fentus
+	66) CyberChest, 5 months ago, v0.11.x, SigmatroN
+	67) Replicators, 5 months ago, v0.11.x, darkshadow1809
+	68) Craft Faster, 5 months ago, v0.11.x, Schmendrick
+	69) Tanks!, 5 months ago, v0.11.x, KON_Air
+	70) Supreme Warfare, 5 months ago, v0.11.x, SpeedyBrain
+	71) No More Bots, 5 months ago, v0.11.x, Turtle
+	72) Smart Inserters, 5 months ago, v0.11.x, Turtle
+	73) Letters MOD, 5 months ago, v0.11.x, yareczek
+	74) Drive Assist, 5 months ago, v0.11.x, Turtle
+	75) Fort mod, 5 months ago, v0.11.x, orzelek
+	76) Easy Belt Layer, 5 months ago, v0.11.x, Schmendrick
+	77) UpGrade, 5 months ago, v0.11.x, yareczek
+	78) Automated Red Alert harvesters, 5 months ago, v0.11.x, ThaPear
+	79) NARMod, 5 months ago, v0.11.x, damienreave
+	80) Evolution Alien Manipulation, 6 months ago, v0.11.x, darkshadow1809
+	81) SEDI, 6 months ago, v0.11.x, Stage
+	82) Smart long inserters, 6 months ago, v0.11.x, Schmendrick
+	83) Inserter energy balance, 6 months ago, v0.11.x, Schmendrick
+	84) Burner Lamp, 6 months ago, v0.11.x, matpmag
+	85) Better electric pole, 6 months ago, v0.11.x, elmi
+	86) Radar 2.0, 6 months ago, v0.11.x, Schmendrick
+	87) Oxygen, 6 months ago, v0.11.x, Natha
+	88) PreFusion, 6 months ago, v0.11.x, matpmag
+	89) Blueprint String, 6 months ago, v0.11.x-0.12.x, DaveMcW
+	90) Underground Mining Drills, 6 months ago, v0.11.x, Schmendrick
+	91) Balanced Better Drills, 6 months ago, N/A, Schmendrick
+	92) Moving Block Signals, 6 months ago, v0.11.x, JamesOFarrell
+	93) Central Boxing, 6 months ago, v0.11.x, Nagshell
+	94) Flame Turrets, 6 months ago, v0.11.x, Foxy_Boxes
+	95) N.Tech-Chemistry, 6 months ago, v0.11.x, Natha
+	96) Long-Range Missile Launcher, 6 months ago, v0.11.x, British_Petroleum
+	97) Recycling Plant, 6 months ago, v0.11.x, noxwaste
+	98) Smart Circuit Systems, 6 months ago, v0.11.x, Kikkers
+	99) Bulldozer, 7 months ago, v0.11.x, Cheata
+	100) Artillery Cannon, 7 months ago, v0.11.x, Buhamut
+	101) Strike's Config Mod, 7 months ago, v0.11.x, ZTStrike
+	102) Resource Monitor Mod, 7 months ago, v0.11.x, drs9999
+	103) Leons Automated Upgrade Generation, 7 months ago, v0.11.x, Leon713
+	104) Replacer, 7 months ago, v0.11.x, kds71
+	105) RoadTrain, 7 months ago, v0.11.x, Cheata
+	106) Condense Air, 7 months ago, v0.11.x, Nagshell
+	107) Oil Refining, 7 months ago, v0.11.x, MasterBuilder
+	108) Uranium Power, 7 months ago, v0.11.x, Liquius
+	109) Steampunk, 7 months ago, v0.11.x, christhereaper
+	110) Boxing, 7 months ago, v0.11.x, Xecutor
+	111) Compact Power, 8 months ago, v0.11.x, Lime
+	112) More Logistics Slots, 8 months ago, v0.11.x, Wenihal
+	113) Mining Drill & Better ore storage, 8 months ago, v0.11.x, TiTaN_3000
+	114) 0craft MOD, 8 months ago, v0.11.x, Cheata
+	115) Alien Temple, 8 months ago, v0.11.x, albatrosv13
+	116) Ore processing, 8 months ago, v0.11.x, albatrosv13
+	117) Creative Mode, 8 months ago, v0.11.x, y.petremann
+	118) Increments, 8 months ago, v0.11.x, Justin Festa
+	119) ThunderGui, 8 months ago, v0.11.x, Mr. Thunder_Tw
+	120) Bridge Railway, 8 months ago, v0.11.x, MrP123
+	121) Replacable poles, 8 months ago, v0.11.x, WildWolf
+	122) Void Chest, 8 months ago, v0.11.x, AlyxDeLunar
+	123) Peace Mod, 8 months ago, v0.11.x, vachu
+	124) Expanded Robot Technologies, 8 months ago, v0.11.x, Natfrac42
+	125) Dynamic Expansion, 8 months ago, v0.11.x, AlyxDeLunar
+	126) Telepad, 8 months ago, v0.11.x, Xecutor
+	127) D.Y.S.T.O.P.I.A., 8 months ago, v0.11.x, Voal
+	128) Biter-friendly items, 8 months ago, v0.11.x, anyname2
+	129) Stamina, 8 months ago, v0.11.x, Schmendrick
+	130) Dump Data, 8 months ago, v0.11.x, y.petremann
+	131) Item Collectors, 8 months ago, v0.10.x-0.11.x, Rseding91
+	132) Molecular Defragmenter, 8 months ago, v0.11.x, JekTrain
+	133) Quake 2 Weapons, 9 months ago, v0.11.x, HeyRevolver
+	134) Reduced building stack sizes, 9 months ago, v0.11.x, Schmendrick
+	135) Green Turtle, 9 months ago, v0.11.x, Schmendrick
+	136) AlphaMod - Advanced Fluid Handling, 9 months ago, v0.11.x, Kexík
+	137) Items Count, 9 months ago, v0.11.x, ThaPear
+	138) Clean Pipes, 9 months ago, v0.11.x, ThaPear
+	139) Default request amount change, 9 months ago, v0.11.x-0.12.x, Martc
+	140) Filtered Splitters, 9 months ago, v0.11.x, ThaPear
+	141) DyTech, 8 months ago, v0.10.x-0.11.x, Dysoch
+	142) Scalar - Scale your technology, 9 months ago, v0.11.x, fishlips13
+	143) Belt Utilities, 9 months ago, v0.11.x, CorrettoSambuca
+	144) ValTech Flechette Rifle, 9 months ago, v0.11.x, Valkor
+	145) Miniaturization, 9 months ago, v0.11.x, Schmendrick
+	146) Logistics Wagons, 9 months ago, v0.11.x, gnz
+	147) Teleporter Belts, 9 months ago, v0.11.x, ThaPear
+	148) Just a Trash Bin, 9 months ago, v0.11.x, space
+	149) RoadWorks, 9 months ago, v0.11.x, Rahjital
+	150) Tower Defense, 9 months ago, v0.11.x, prg
+	151) PvP with craftable Biters, 10 months ago, v0.11.x, FishSandwich
+	152) Canister Mod, 10 months ago, v0.11.x, Chester
+	153) Judgement Day, 10 months ago, v0.11.x, Adil
+	154) Stack-Breaker, 10 months ago, v0.11.x, DraLUSAD
+	155) Peaceful Mode, 10 months ago, v0.11.x, firegrenade
+	156) Fluid Barrel, 10 months ago, v0.11.x-0.12.x, firegrenade
+	157) MapConverter, 10 months ago, v0.11.x, ForFoxAche
+	158) Static game difficulty, 10 months ago, v0.11.x-0.12.x, LoSboccacc
+	159) Record Your Stuff!, 11 months ago, v0.11.x, AlyxDeLunar
+	160) Infinite Research, 11 months ago, v0.11.x, oktabyte
+	161) Electric Walls, 11 months ago, v0.11.x, Genhis
+	162) Marathon Mod, 11 months ago, v0.11.x, bgirard
+	163) Start Out Planning, 11 months ago, v0.11.x, AlyxDeLunar
+	164) Mohole, 11 months ago, v0.11.x, starholme
+	165) Steam, 11 months ago, v0.11.x, starholme
+	166) Magnet, 11 months ago, v0.11.x, Schmendrick
+	167) Logistic mod, 11 months ago, v0.11.x, elmi
+	168) Barrel Mod, 11 months ago, v0.11.x, psychobarge
+	169) Random Stuff, 11 months ago, v0.11.x, Mackan90096
+	170) Advanced accumulator, 11 months ago, v0.10.x-0.11.x, Nova
+	171) Alien Oil, 11 months ago, v0.11.x, Rseding91
+	172) Belt Switchers, 11 months ago, v0.11.x, ThaPear
+	173) Stainless Steel wagon, 11 months ago, v0.11.x-0.12.x, Rseding91
+	174) Minable Corpses, 12 months ago, v0.11.x, Tinly
+	175) UndergroundBeltsExtended aka Belts+, 12 months ago, v0.11.x, Zetsubo
+	176) Foreman - Blueprint Manager, 12 months ago, v0.11.x, JamesOFarrell
+	177) Force Fields, 11 months ago, v0.11.x, Rseding91
+	178) Offshore Dump, 11 months ago, v0.11.x, Kirk
+	179) Replicators, 12 months ago, v0.11.x, jamuspsi
+	180) Factorio Maps, 12 months ago, v0.11.x, jeroon
+	181) Tankwerkz Unlimited, 12 months ago, v0.11.x, thegreyman
+	182) Blueprint String, 7 months ago, v0.11.x, DaveMcW
+	183) MPlayers, 12 months ago, v0.11.x, jeroon
+	184) TimeButtons, 12 months ago, v0.11.x, Darius456
+	185) Hardcorio, 4 months ago, v0.11.x, Stx3
+	186) JBullet, 12 months ago, v0.11.x, JohnDowson
+	187) Power Switch Mod, about 1 year ago, v0.11.x, drs9999
+	188) Planning Tool Mod, about 1 year ago, v0.11.x, drs9999
+	189) Larger Inventory, about 1 year ago, v0.10.x-0.12.x, Rseding91
+	190) Loot-able Rocks, about 1 year ago, v0.11.x-0.12.x, Rseding91
+	191) canInsert, about 1 year ago, v0.11.x, Rseding91
+	192) Belt Blocker, about 1 year ago, v0.11.x, JamesOFarrell
+	193) Straight Pipes, about 1 year ago, v0.11.x, JamesOFarrell
+	194) Scrap Mod, about 1 year ago, v0.11.x, Schmendrick
+	195) Time Display, over 1 year ago, v0.10.x, Dark
+	196) Advanced Equipment, 12 months ago, v0.10.x-0.11.x, Darius456
+	197) Side Inserters, 10 months ago, v0.9.x-0.11.x, GotLag
+	198) Alien Science, over 1 year ago, v0.11.x, darkrising
+	199) Slipstream Chests, over 1 year ago, v0.11.x, Degraine
+	200) Treefarm, over 1 year ago, v0.11.x, drs9999
+	201) Endless resources, over 1 year ago, v0.11.x-0.12.x, LoSboccacc
+	202) F mod, N/A, N/A, ficolas
+	203) Basic Planner, 12 months ago, v0.11.x, Xecutor
+Science (70)
+	0) Oil Steam Boiler, 22 days ago, v0.12.x, Klonan
+	1) Ghosts From the Start, 3 months ago, v0.11.x-0.12.x, Schmendrick
+	2) Equalizer chests, 4 months ago, v0.11.x-0.12.x, Boogieman14
+	3) Pneumatic Tubes, 4 months ago, v0.11.x-0.12.x, jorgenRe
+	4) Pocket Bots, 4 months ago, v0.11.x, JamesOFarrell
+	5) Lishgets TMod, 4 months ago, v0.11.x, Lishget
+	6) AeroTech Storage, 4 months ago, v0.11.x, ArkeousAero
+	7) Packaged Items, 4 months ago, v0.11.x, TheBauwssss
+	8) Electricity by XyLe, 5 months ago, v0.11.x, XyLe
+	9) Science pack prerequisites, 5 months ago, v0.11.x, ThaPear
+	10) Turret range/armor upgrades, 5 months ago, v0.11.x, ThaPear
+	11) Big Wooden Power Pole, 5 months ago, v0.11.x-0.12.x, Klonan
+	12) Craft Faster, 5 months ago, v0.11.x, Schmendrick
+	13) Replicators, 5 months ago, v0.11.x, darkshadow1809
+	14) CyberChest, 5 months ago, v0.11.x, SigmatroN
+	15) Tanks!, 5 months ago, v0.11.x, KON_Air
+	16) Smart Inserters, 5 months ago, v0.11.x, Turtle
+	17) Fort mod, 5 months ago, v0.11.x, orzelek
+	18) NARMod, 5 months ago, v0.11.x, damienreave
+	19) Evolution Alien Manipulation, 6 months ago, v0.11.x, darkshadow1809
+	20) Oxygen, 6 months ago, v0.11.x, Natha
+	21) Radar 2.0, 6 months ago, v0.11.x, Schmendrick
+	22) Underground Mining Drills, 6 months ago, v0.11.x, Schmendrick
+	23) Balanced Better Drills, 6 months ago, N/A, Schmendrick
+	24) N.Tech-Chemistry, 6 months ago, v0.11.x, Natha
+	25) Recycling Plant, 6 months ago, v0.11.x, noxwaste
+	26) Smart Circuit Systems, 6 months ago, v0.11.x, Kikkers
+	27) Bulldozer, 7 months ago, v0.11.x, Cheata
+	28) Resource Monitor Mod, 7 months ago, v0.11.x, drs9999
+	29) Leons Automated Upgrade Generation, 7 months ago, v0.11.x, Leon713
+	30) Replacer, 7 months ago, v0.11.x, kds71
+	31) Uranium Power, 7 months ago, v0.11.x, Liquius
+	32) Steampunk, 7 months ago, v0.11.x, christhereaper
+	33) Boxing, 7 months ago, v0.11.x, Xecutor
+	34) Compact Power, 8 months ago, v0.11.x, Lime
+	35) Mining Drill & Better ore storage, 8 months ago, v0.11.x, TiTaN_3000
+	36) Alien Temple, 8 months ago, v0.11.x, albatrosv13
+	37) Ore processing, 8 months ago, v0.11.x, albatrosv13
+	38) Increments, 8 months ago, v0.11.x, Justin Festa
+	39) Bridge Railway, 8 months ago, v0.11.x, MrP123
+	40) Expanded Robot Technologies, 8 months ago, v0.11.x, Natfrac42
+	41) Telepad, 8 months ago, v0.11.x, Xecutor
+	42) AlphaMod - Advanced Fluid Handling, 9 months ago, v0.11.x, Kexík
+	43) ValTech Flechette Rifle, 9 months ago, v0.11.x, Valkor
+	44) Miniaturization, 9 months ago, v0.11.x, Schmendrick
+	45) Teleporter Belts, 9 months ago, v0.11.x, ThaPear
+	46) RoadWorks, 9 months ago, v0.11.x, Rahjital
+	47) Peaceful Mode, 10 months ago, v0.11.x, firegrenade
+	48) Fluid Barrel, 10 months ago, v0.11.x-0.12.x, firegrenade
+	49) Infinite Research, 11 months ago, v0.11.x, oktabyte
+	50) Start Out Planning, 11 months ago, v0.11.x, AlyxDeLunar
+	51) Mohole, 11 months ago, v0.11.x, starholme
+	52) Magnet, 11 months ago, v0.11.x, Schmendrick
+	53) Logistic mod, 11 months ago, v0.11.x, elmi
+	54) Advanced accumulator, 11 months ago, v0.10.x-0.11.x, Nova
+	55) Alien Oil, 11 months ago, v0.11.x, Rseding91
+	56) Stainless Steel wagon, 11 months ago, v0.11.x-0.12.x, Rseding91
+	57) UndergroundBeltsExtended aka Belts+, 12 months ago, v0.11.x, Zetsubo
+	58) Replicators, 12 months ago, v0.11.x, jamuspsi
+	59) Tankwerkz Unlimited, 12 months ago, v0.11.x, thegreyman
+	60) Planning Tool Mod, about 1 year ago, v0.11.x, drs9999
+	61) Side Inserters, 10 months ago, v0.9.x-0.11.x, GotLag
+	62) Slipstream Chests, over 1 year ago, v0.11.x, Degraine
+	63) Alien Science, over 1 year ago, v0.11.x, darkrising
+	64) Treefarm, over 1 year ago, v0.11.x, drs9999
+Utilities (45)
+	0) Equivalent Exchange, about 2 months ago, v0.12.x, matjojo
+	1) Better Vehicle Control, 3 months ago, v0.11.x-0.12.x, y.petremann
+	2) Ghosts From the Start, 3 months ago, v0.11.x-0.12.x, Schmendrick
+	3) Fluid Void, 4 months ago, v0.11.x-0.12.x, Rseding91
+	4) Explosive Termites, 4 months ago, v0.11.x-0.12.x, Rseding91
+	5) Pocket Bots, 4 months ago, v0.11.x, JamesOFarrell
+	6) Displaying range of turrets, 5 months ago, v0.11.x, kds71
+	7) Autofill, 5 months ago, v0.11.x, rk84
+	8) Visual Help, 5 months ago, v0.11.x, y.petremann
+	9) Recipe Clipboard, 5 months ago, v0.11.x, leflings
+	10) SpeedControl, 5 months ago, v0.11.x, Fentus
+	11) Letters MOD, 5 months ago, v0.11.x, yareczek
+	12) Drive Assist, 5 months ago, v0.11.x, Turtle
+	13) No More Bots, 5 months ago, v0.11.x, Turtle
+	14) Easy Belt Layer, 5 months ago, v0.11.x, Schmendrick
+	15) Blueprint String, 6 months ago, v0.11.x-0.12.x, DaveMcW
+	16) Bulldozer, 7 months ago, v0.11.x, Cheata
+	17) Resource Monitor Mod, 7 months ago, v0.11.x, drs9999
+	18) Replacer, 7 months ago, v0.11.x, kds71
+	19) Creative Mode, 8 months ago, v0.11.x, y.petremann
+	20) Void Chest, 8 months ago, v0.11.x, AlyxDeLunar
+	21) Dump Data, 8 months ago, v0.11.x, y.petremann
+	22) Molecular Defragmenter, 8 months ago, v0.11.x, JekTrain
+	23) AlphaMod - Advanced Fluid Handling, 9 months ago, v0.11.x, Kexík
+	24) Items Count, 9 months ago, v0.11.x, ThaPear
+	25) Clean Pipes, 9 months ago, v0.11.x, ThaPear
+	26) Just a Trash Bin, 9 months ago, v0.11.x, space
+	27) MapConverter, 10 months ago, v0.11.x, ForFoxAche
+	28) Record Your Stuff!, 11 months ago, v0.11.x, AlyxDeLunar
+	29) Start Out Planning, 11 months ago, v0.11.x, AlyxDeLunar
+	30) Magnet, 11 months ago, v0.11.x, Schmendrick
+	31) Belt Switchers, 11 months ago, v0.11.x, ThaPear
+	32) Foreman - Blueprint Manager, 12 months ago, v0.11.x, JamesOFarrell
+	33) Blueprint String, 7 months ago, v0.11.x, DaveMcW
+	34) Factorio Maps, 12 months ago, v0.11.x, jeroon
+	35) TimeButtons, 12 months ago, v0.11.x, Darius456
+	36) Planning Tool Mod, about 1 year ago, v0.11.x, drs9999
+	37) Larger Inventory, about 1 year ago, v0.10.x-0.12.x, Rseding91
+	38) Belt Blocker, about 1 year ago, v0.11.x, JamesOFarrell
+	39) Straight Pipes, about 1 year ago, v0.11.x, JamesOFarrell
+GUI (42)
+	0) Lua Combinators, 2 months ago, v0.12.x, JamesOFarrell
+	1) Ghosts From the Start, 3 months ago, v0.11.x-0.12.x, Schmendrick
+	2) Evolution Factor Indicator, 3 months ago, v0.12.x, Narc
+	3) The Fat Controller, 4 months ago, v0.11.x-0.12.x, JamesOFarrell
+	4) Hebrew RTL Fixer/Inverter, 4 months ago, v0.12.x, Dev-iL
+	5) Displaying range of turrets, 5 months ago, v0.11.x, kds71
+	6) Recipe Clipboard, 5 months ago, v0.11.x, leflings
+	7) Cursed Exp, 5 months ago, v0.11.x, L0771
+	8) SpeedControl, 5 months ago, v0.11.x, Fentus
+	9) No More Bots, 5 months ago, v0.11.x, Turtle
+	10) Drive Assist, 5 months ago, v0.11.x, Turtle
+	11) Easy Belt Layer, 5 months ago, v0.11.x, Schmendrick
+	12) Blueprint String, 6 months ago, v0.11.x-0.12.x, DaveMcW
+	13) Resource Monitor Mod, 7 months ago, v0.11.x, drs9999
+	14) More Logistics Slots, 8 months ago, v0.11.x, Wenihal
+	15) Increments, 8 months ago, v0.11.x, Justin Festa
+	16) ThunderGui, 8 months ago, v0.11.x, Mr. Thunder_Tw
+	17) Replacable poles, 8 months ago, v0.11.x, WildWolf
+	18) Stamina, 8 months ago, v0.11.x, Schmendrick
+	19) Reduced building stack sizes, 9 months ago, v0.11.x, Schmendrick
+	20) AlphaMod - Advanced Fluid Handling, 9 months ago, v0.11.x, Kexík
+	21) Items Count, 9 months ago, v0.11.x, ThaPear
+	22) Default request amount change, 9 months ago, v0.11.x-0.12.x, Martc
+	23) Just a Trash Bin, 9 months ago, v0.11.x, space
+	24) Tower Defense, 9 months ago, v0.11.x, prg
+	25) Stack-Breaker, 10 months ago, v0.11.x, DraLUSAD
+	26) Record Your Stuff!, 11 months ago, v0.11.x, AlyxDeLunar
+	27) Start Out Planning, 11 months ago, v0.11.x, AlyxDeLunar
+	28) Magnet, 11 months ago, v0.11.x, Schmendrick
+	29) Foreman - Blueprint Manager, 12 months ago, v0.11.x, JamesOFarrell
+	30) Blueprint String, 7 months ago, v0.11.x, DaveMcW
+	31) MPlayers, 12 months ago, v0.11.x, jeroon
+	32) TimeButtons, 12 months ago, v0.11.x, Darius456
+	33) Planning Tool Mod, about 1 year ago, v0.11.x, drs9999
+	34) Larger Inventory, about 1 year ago, v0.10.x-0.12.x, Rseding91
+	35) Straight Pipes, about 1 year ago, v0.11.x, JamesOFarrell
+	36) Time Display, over 1 year ago, v0.10.x, Dark
+	37) Basic Planner, 12 months ago, v0.11.x, Xecutor
+Manufacturing (40)
+	0) Bob's Metals, Chemicals and Intermediates mod, 2 months ago, v0.12.x, bobingabout
+	1) Steel Manufacturing Unit, 3 months ago, v0.12.x, Klonan
+	2) Burner Manufacturing Unit, 3 months ago, v0.12.x, Klonan
+	3) No Hand Crafting, 3 months ago, v0.11.x-0.12.x, y.petremann
+	4) Landfill, 4 months ago, v0.11.x-0.12.x, Rseding91
+	5) AeroTech Storage, 4 months ago, v0.11.x, ArkeousAero
+	6) Packaged Items, 4 months ago, v0.11.x, TheBauwssss
+	7) Replicators, 5 months ago, v0.11.x, darkshadow1809
+	8) CyberChest, 5 months ago, v0.11.x, SigmatroN
+	9) Tanks!, 5 months ago, v0.11.x, KON_Air
+	10) Automated Red Alert harvesters, 5 months ago, v0.11.x, ThaPear
+	11) NARMod, 5 months ago, v0.11.x, damienreave
+	12) SEDI, 6 months ago, v0.11.x, Stage
+	13) Better electric pole, 6 months ago, v0.11.x, elmi
+	14) Oxygen, 6 months ago, v0.11.x, Natha
+	15) Central Boxing, 6 months ago, v0.11.x, Nagshell
+	16) N.Tech-Chemistry, 6 months ago, v0.11.x, Natha
+	17) Long-Range Missile Launcher, 6 months ago, v0.11.x, British_Petroleum
+	18) Recycling Plant, 6 months ago, v0.11.x, noxwaste
+	19) Condense Air, 7 months ago, v0.11.x, Nagshell
+	20) Steampunk, 7 months ago, v0.11.x, christhereaper
+	21) Boxing, 7 months ago, v0.11.x, Xecutor
+	22) Ore processing, 8 months ago, v0.11.x, albatrosv13
+	23) Increments, 8 months ago, v0.11.x, Justin Festa
+	24) Bridge Railway, 8 months ago, v0.11.x, MrP123
+	25) Peace Mod, 8 months ago, v0.11.x, vachu
+	26) Stamina, 8 months ago, v0.11.x, Schmendrick
+	27) Molecular Defragmenter, 8 months ago, v0.11.x, JekTrain
+	28) DyTech, 8 months ago, v0.10.x-0.11.x, Dysoch
+	29) Miniaturization, 9 months ago, v0.11.x, Schmendrick
+	30) RoadWorks, 9 months ago, v0.11.x, Rahjital
+	31) PvP with craftable Biters, 10 months ago, v0.11.x, FishSandwich
+	32) Canister Mod, 10 months ago, v0.11.x, Chester
+	33) Peaceful Mode, 10 months ago, v0.11.x, firegrenade
+	34) Fluid Barrel, 10 months ago, v0.11.x-0.12.x, firegrenade
+	35) Barrel Mod, 11 months ago, v0.11.x, psychobarge
+	36) Replicators, 12 months ago, v0.11.x, jamuspsi
+	37) Alien Science, over 1 year ago, v0.11.x, darkrising
+	38) Treefarm, over 1 year ago, v0.11.x, drs9999
+Gameplay (38)
+	0) Galactic Trade Mod, about 2 months ago, v0.12.x, coopmaster
+	1) Equivalent Exchange, about 2 months ago, v0.12.x, matjojo
+	2) Lua Combinators, 2 months ago, v0.12.x, JamesOFarrell
+	3) No Hand Crafting, 3 months ago, v0.11.x-0.12.x, y.petremann
+	4) No Hand Mining, 3 months ago, v0.11.x-0.12.x, y.petremann
+	5) Ore Expansion, 4 months ago, v0.10.x-0.12.x, Rseding91
+	6) Natural Evolution, 5 months ago, v0.11.x, TheSAguy
+	7) Cursed Exp, 5 months ago, v0.11.x, L0771
+	8) Just Another No Hand Crafting Mod, 5 months ago, v0.11.x, ErnieVanDyke
+	9) Flying Boots, 5 months ago, v0.11.x, giodamelio
+	10) No Hand Crafting, 5 months ago, v0.11.x, Fentus
+	11) Belts Are Broken, 5 months ago, v0.11.x, Fentus
+	12) Craft Faster, 5 months ago, v0.11.x, Schmendrick
+	13) NARMod, 5 months ago, v0.11.x, damienreave
+	14) Inserter energy balance, 6 months ago, v0.11.x, Schmendrick
+	15) Oxygen, 6 months ago, v0.11.x, Natha
+	16) Recycling Plant, 6 months ago, v0.11.x, noxwaste
+	17) Steampunk, 7 months ago, v0.11.x, christhereaper
+	18) 0craft MOD, 8 months ago, v0.11.x, Cheata
+	19) Alien Temple, 8 months ago, v0.11.x, albatrosv13
+	20) Increments, 8 months ago, v0.11.x, Justin Festa
+	21) Peace Mod, 8 months ago, v0.11.x, vachu
+	22) Dynamic Expansion, 8 months ago, v0.11.x, AlyxDeLunar
+	23) D.Y.S.T.O.P.I.A., 8 months ago, v0.11.x, Voal
+	24) Biter-friendly items, 8 months ago, v0.11.x, anyname2
+	25) Stamina, 8 months ago, v0.11.x, Schmendrick
+	26) Green Turtle, 9 months ago, v0.11.x, Schmendrick
+	27) Tower Defense, 9 months ago, v0.11.x, prg
+	28) Canister Mod, 10 months ago, v0.11.x, Chester
+	29) Peaceful Mode, 10 months ago, v0.11.x, firegrenade
+	30) Static game difficulty, 10 months ago, v0.11.x-0.12.x, LoSboccacc
+	31) Marathon Mod, 11 months ago, v0.11.x, bgirard
+	32) TimeButtons, 12 months ago, v0.11.x, Darius456
+	33) Hardcorio, 4 months ago, v0.11.x, Stx3
+	34) Scrap Mod, about 1 year ago, v0.11.x, Schmendrick
+	35) Endless resources, over 1 year ago, v0.11.x-0.12.x, LoSboccacc
+Electricity (27)
+	0) Diesel Generator, 6 days ago, v0.12.x, Klonan
+	1) Burner Generator, 21 days ago, v0.12.x, Klonan
+	2) Oil Steam Boiler, 22 days ago, v0.12.x, Klonan
+	3) Wind Turbine, 26 days ago, v0.12.x, Klonan
+	4) Transformator, 4 months ago, v0.11.x-0.12.x, Gotbread
+	5) Electric boiler, 4 months ago, v0.11.x, johanwanderer
+	6) Electricity by XyLe, 5 months ago, v0.11.x, XyLe
+	7) Big Wooden Power Pole, 5 months ago, v0.11.x-0.12.x, Klonan
+	8) Fuel Farmer, 5 months ago, v0.11.x, Fentus
+	9) Replicators, 5 months ago, v0.11.x, darkshadow1809
+	10) UpGrade, 5 months ago, v0.11.x, yareczek
+	11) Inserter energy balance, 6 months ago, v0.11.x, Schmendrick
+	12) Burner Lamp, 6 months ago, v0.11.x, matpmag
+	13) Better electric pole, 6 months ago, v0.11.x, elmi
+	14) Smart Circuit Systems, 6 months ago, v0.11.x, Kikkers
+	15) Uranium Power, 7 months ago, v0.11.x, Liquius
+	16) Compact Power, 8 months ago, v0.11.x, Lime
+	17) Replacable poles, 8 months ago, v0.11.x, WildWolf
+	18) AlphaMod - Advanced Fluid Handling, 9 months ago, v0.11.x, Kexík
+	19) Electric Walls, 11 months ago, v0.11.x, Genhis
+	20) Steam, 11 months ago, v0.11.x, starholme
+	21) Advanced accumulator, 11 months ago, v0.10.x-0.11.x, Nova
+	22) Replicators, 12 months ago, v0.11.x, jamuspsi
+	23) Power Switch Mod, about 1 year ago, v0.11.x, drs9999
+Oil (24)
+	0) Oil Steam Boiler, 22 days ago, v0.12.x, Klonan
+	1) Rail Tanker, 2 months ago, v0.11.x-0.12.x, JamesOFarrell
+	2) Bergius Process, 3 months ago, v0.12.x, Klonan
+	3) Fluid Void, 4 months ago, v0.11.x-0.12.x, Rseding91
+	4) UpGrade, 5 months ago, v0.11.x, yareczek
+	5) NARMod, 5 months ago, v0.11.x, damienreave
+	6) SEDI, 6 months ago, v0.11.x, Stage
+	7) N.Tech-Chemistry, 6 months ago, v0.11.x, Natha
+	8) Long-Range Missile Launcher, 6 months ago, v0.11.x, British_Petroleum
+	9) Smart Circuit Systems, 6 months ago, v0.11.x, Kikkers
+	10) Oil Refining, 7 months ago, v0.11.x, MasterBuilder
+	11) Steampunk, 7 months ago, v0.11.x, christhereaper
+	12) AlphaMod - Advanced Fluid Handling, 9 months ago, v0.11.x, Kexík
+	13) Clean Pipes, 9 months ago, v0.11.x, ThaPear
+	14) RoadWorks, 9 months ago, v0.11.x, Rahjital
+	15) Canister Mod, 10 months ago, v0.11.x, Chester
+	16) Fluid Barrel, 10 months ago, v0.11.x-0.12.x, firegrenade
+	17) Barrel Mod, 11 months ago, v0.11.x, psychobarge
+	18) Alien Oil, 11 months ago, v0.11.x, Rseding91
+	19) Offshore Dump, 11 months ago, v0.11.x, Kirk
+	20) Straight Pipes, about 1 year ago, v0.11.x, JamesOFarrell
+Resources (24)
+	0) Bob's mod - Ores, 2 months ago, v0.11.x-0.12.x, bobingabout
+	1) Bob's Metals, Chemicals and Intermediates mod, 2 months ago, v0.12.x, bobingabout
+	2) Landfill, 4 months ago, v0.11.x-0.12.x, Rseding91
+	3) Ore Expansion, 4 months ago, v0.10.x-0.12.x, Rseding91
+	4) Explosive Termites, 4 months ago, v0.11.x-0.12.x, Rseding91
+	5) Replicators, 5 months ago, v0.11.x, darkshadow1809
+	6) Automated Red Alert harvesters, 5 months ago, v0.11.x, ThaPear
+	7) NARMod, 5 months ago, v0.11.x, damienreave
+	8) Evolution Alien Manipulation, 6 months ago, v0.11.x, darkshadow1809
+	9) SEDI, 6 months ago, v0.11.x, Stage
+	10) Oxygen, 6 months ago, v0.11.x, Natha
+	11) Underground Mining Drills, 6 months ago, v0.11.x, Schmendrick
+	12) Resource Monitor Mod, 7 months ago, v0.11.x, drs9999
+	13) Condense Air, 7 months ago, v0.11.x, Nagshell
+	14) Uranium Power, 7 months ago, v0.11.x, Liquius
+	15) Ore processing, 8 months ago, v0.11.x, albatrosv13
+	16) Peace Mod, 8 months ago, v0.11.x, vachu
+	17) DyTech, 8 months ago, v0.10.x-0.11.x, Dysoch
+	18) RoadWorks, 9 months ago, v0.11.x, Rahjital
+	19) Mohole, 11 months ago, v0.11.x, starholme
+	20) Replicators, 12 months ago, v0.11.x, jamuspsi
+	21) Loot-able Rocks, about 1 year ago, v0.11.x-0.12.x, Rseding91
+	22) Treefarm, over 1 year ago, v0.11.x, drs9999
+	23) Endless resources, over 1 year ago, v0.11.x-0.12.x, LoSboccacc
+Buildings (23)
+	0) Bob's Metals, Chemicals and Intermediates mod, 2 months ago, v0.12.x, bobingabout
+	1) Bucket Wheel Excavator, 4 months ago, v0.11.x-0.12.x, jorgenRe
+	2) Natural Evolution, 5 months ago, v0.11.x, TheSAguy
+	3) Cursed Exp, 5 months ago, v0.11.x, L0771
+	4) Electricity by XyLe, 5 months ago, v0.11.x, XyLe
+	5) Supreme Warfare, 5 months ago, v0.11.x, SpeedyBrain
+	6) Fort mod, 5 months ago, v0.11.x, orzelek
+	7) Underground Mining Drills, 6 months ago, v0.11.x, Schmendrick
+	8) Artillery Cannon, 7 months ago, v0.11.x, Buhamut
+	9) Condense Air, 7 months ago, v0.11.x, Nagshell
+	10) Steampunk, 7 months ago, v0.11.x, christhereaper
+	11) Compact Power, 8 months ago, v0.11.x, Lime
+	12) Alien Temple, 8 months ago, v0.11.x, albatrosv13
+	13) Ore processing, 8 months ago, v0.11.x, albatrosv13
+	14) D.Y.S.T.O.P.I.A., 8 months ago, v0.11.x, Voal
+	15) Miniaturization, 9 months ago, v0.11.x, Schmendrick
+	16) Tower Defense, 9 months ago, v0.11.x, prg
+	17) Record Your Stuff!, 11 months ago, v0.11.x, AlyxDeLunar
+	18) Electric Walls, 11 months ago, v0.11.x, Genhis
+	19) Scrap Mod, about 1 year ago, v0.11.x, Schmendrick
+Balance (18)
+	0) Ore Expansion, 4 months ago, v0.10.x-0.12.x, Rseding91
+	1) Natural Evolution, 5 months ago, v0.11.x, TheSAguy
+	2) Science pack prerequisites, 5 months ago, v0.11.x, ThaPear
+	3) JohnRipley's Tweakmod, 5 months ago, v0.11.x, JohnRipley
+	4) Craft Faster, 5 months ago, v0.11.x, Schmendrick
+	5) Inserter energy balance, 6 months ago, v0.11.x, Schmendrick
+	6) PreFusion, 6 months ago, v0.11.x, matpmag
+	7) Balanced Better Drills, 6 months ago, N/A, Schmendrick
+	8) Strike's Config Mod, 7 months ago, v0.11.x, ZTStrike
+	9) Leons Automated Upgrade Generation, 7 months ago, v0.11.x, Leon713
+	10) Expanded Robot Technologies, 8 months ago, v0.11.x, Natfrac42
+	11) Reduced building stack sizes, 9 months ago, v0.11.x, Schmendrick
+	12) Green Turtle, 9 months ago, v0.11.x, Schmendrick
+	13) Scalar - Scale your technology, 9 months ago, v0.11.x, fishlips13
+	14) Judgement Day, 10 months ago, v0.11.x, Adil
+	15) Static game difficulty, 10 months ago, v0.11.x-0.12.x, LoSboccacc
+	16) Endless resources, over 1 year ago, v0.11.x-0.12.x, LoSboccacc
+Containers (18)
+	0) Rail Tanker, 2 months ago, v0.11.x-0.12.x, JamesOFarrell
+	1) Equalizer chests, 4 months ago, v0.11.x-0.12.x, Boogieman14
+	2) Pneumatic Tubes, 4 months ago, v0.11.x-0.12.x, jorgenRe
+	3) Compression Chests, 4 months ago, v0.11.x-0.12.x, Rseding91
+	4) Long Large Chests, 4 months ago, v0.11.x, johanwanderer
+	5) Stackers, 4 months ago, v0.11.x, dalsio
+	6) AeroTech Storage, 4 months ago, v0.11.x, ArkeousAero
+	7) CyberChest, 5 months ago, v0.11.x, SigmatroN
+	8) Central Boxing, 6 months ago, v0.11.x, Nagshell
+	9) Boxing, 7 months ago, v0.11.x, Xecutor
+	10) Mining Drill & Better ore storage, 8 months ago, v0.11.x, TiTaN_3000
+	11) Void Chest, 8 months ago, v0.11.x, AlyxDeLunar
+	12) Item Collectors, 8 months ago, v0.10.x-0.11.x, Rseding91
+	13) Logistics Wagons, 9 months ago, v0.11.x, gnz
+	14) Stainless Steel wagon, 11 months ago, v0.11.x-0.12.x, Rseding91
+	15) Slipstream Chests, over 1 year ago, v0.11.x, Degraine
+Enemies (18)
+	0) Evolution Factor Indicator, 3 months ago, v0.12.x, Narc
+	1) Natural Evolution, 5 months ago, v0.11.x, TheSAguy
+	2) Evolution Alien Manipulation, 6 months ago, v0.11.x, darkshadow1809
+	3) SEDI, 6 months ago, v0.11.x, Stage
+	4) Radar 2.0, 6 months ago, v0.11.x, Schmendrick
+	5) Alien Temple, 8 months ago, v0.11.x, albatrosv13
+	6) Peace Mod, 8 months ago, v0.11.x, vachu
+	7) Dynamic Expansion, 8 months ago, v0.11.x, AlyxDeLunar
+	8) D.Y.S.T.O.P.I.A., 8 months ago, v0.11.x, Voal
+	9) Biter-friendly items, 8 months ago, v0.11.x, anyname2
+	10) Green Turtle, 9 months ago, v0.11.x, Schmendrick
+	11) PvP with craftable Biters, 10 months ago, v0.11.x, FishSandwich
+	12) Judgement Day, 10 months ago, v0.11.x, Adil
+	13) Peaceful Mode, 10 months ago, v0.11.x, firegrenade
+	14) Static game difficulty, 10 months ago, v0.11.x-0.12.x, LoSboccacc
+	15) Minable Corpses, 12 months ago, v0.11.x, Tinly
+	16) Hardcorio, 4 months ago, v0.11.x, Stx3
+	17) Alien Science, over 1 year ago, v0.11.x, darkrising
+Logistics Network (17)
+	0) Ghosts From the Start, 3 months ago, v0.11.x-0.12.x, Schmendrick
+	1) Pocket Bots Start, 4 months ago, v0.12.x, vampiricdust
+	2) Pneumatic Tubes, 4 months ago, v0.11.x-0.12.x, jorgenRe
+	3) Stackers, 4 months ago, v0.11.x, dalsio
+	4) Pocket Bots, 4 months ago, v0.11.x, JamesOFarrell
+	5) No More Bots, 5 months ago, v0.11.x, Turtle
+	6) Blueprint String, 6 months ago, v0.11.x-0.12.x, DaveMcW
+	7) Replacer, 7 months ago, v0.11.x, kds71
+	8) More Logistics Slots, 8 months ago, v0.11.x, Wenihal
+	9) Expanded Robot Technologies, 8 months ago, v0.11.x, Natfrac42
+	10) Default request amount change, 9 months ago, v0.11.x-0.12.x, Martc
+	11) Logistics Wagons, 9 months ago, v0.11.x, gnz
+	12) Start Out Planning, 11 months ago, v0.11.x, AlyxDeLunar
+	13) Logistic mod, 11 months ago, v0.11.x, elmi
+	14) Foreman - Blueprint Manager, 12 months ago, v0.11.x, JamesOFarrell
+Vehicles (16)
+	0) Rail Tanker, 2 months ago, v0.11.x-0.12.x, JamesOFarrell
+	1) Better Vehicle Control, 3 months ago, v0.11.x-0.12.x, y.petremann
+	2) Aircraft, 3 months ago, v0.12.x, Eldwen
+	3) Cursed Underground Transport, 3 months ago, v0.11.x-0.12.x, L0771
+	4) Tanks!, 5 months ago, v0.11.x, KON_Air
+	5) Drive Assist, 5 months ago, v0.11.x, Turtle
+	6) Automated Red Alert harvesters, 5 months ago, v0.11.x, ThaPear
+	7) Bulldozer, 7 months ago, v0.11.x, Cheata
+	8) RoadTrain, 7 months ago, v0.11.x, Cheata
+	9) RoadWorks, 9 months ago, v0.11.x, Rahjital
+	10) Tankwerkz Unlimited, 12 months ago, v0.11.x, thegreyman
+	11) JBullet, 12 months ago, v0.11.x, JohnDowson
+	12) Scrap Mod, about 1 year ago, v0.11.x, Schmendrick
+Warfare (15)
+	0) Aircraft, 3 months ago, v0.12.x, Eldwen
+	1) Supreme Warfare, 5 months ago, v0.11.x, SpeedyBrain
+	2) Evolution Alien Manipulation, 6 months ago, v0.11.x, darkshadow1809
+	3) Flame Turrets, 6 months ago, v0.11.x, Foxy_Boxes
+	4) Long-Range Missile Launcher, 6 months ago, v0.11.x, British_Petroleum
+	5) Artillery Cannon, 7 months ago, v0.11.x, Buhamut
+	6) Peace Mod, 8 months ago, v0.11.x, vachu
+	7) D.Y.S.T.O.P.I.A., 8 months ago, v0.11.x, Voal
+	8) Biter-friendly items, 8 months ago, v0.11.x, anyname2
+	9) Quake 2 Weapons, 9 months ago, v0.11.x, HeyRevolver
+	10) ValTech Flechette Rifle, 9 months ago, v0.11.x, Valkor
+	11) Tower Defense, 9 months ago, v0.11.x, prg
+	12) PvP with craftable Biters, 10 months ago, v0.11.x, FishSandwich
+	13) Peaceful Mode, 10 months ago, v0.11.x, firegrenade
+	14) Electric Walls, 11 months ago, v0.11.x, Genhis
+Mining (13)
+	0) Bob's mod - Ores, 2 months ago, v0.11.x-0.12.x, bobingabout
+	1) No Hand Mining, 3 months ago, v0.11.x-0.12.x, y.petremann
+	2) Landfill, 4 months ago, v0.11.x-0.12.x, Rseding91
+	3) Bucket Wheel Excavator, 4 months ago, v0.11.x-0.12.x, jorgenRe
+	4) Balanced Better Drills, 6 months ago, N/A, Schmendrick
+	5) Underground Mining Drills, 6 months ago, v0.11.x, Schmendrick
+	6) Steampunk, 7 months ago, v0.11.x, christhereaper
+	7) Mining Drill & Better ore storage, 8 months ago, v0.11.x, TiTaN_3000
+	8) Ore processing, 8 months ago, v0.11.x, albatrosv13
+	9) Mohole, 11 months ago, v0.11.x, starholme
+	10) Minable Corpses, 12 months ago, v0.11.x, Tinly
+	11) Loot-able Rocks, about 1 year ago, v0.11.x-0.12.x, Rseding91
+	12) Scrap Mod, about 1 year ago, v0.11.x, Schmendrick
+Equipment (12)
+	0) Cursed Jet Pack, 3 months ago, v0.12.x, L0771
+	1) Advanced Equipment, 4 months ago, v0.12.x, jorgenRe
+	2) Pocket Bots, 4 months ago, v0.11.x, JamesOFarrell
+	3) Lishgets TMod, 4 months ago, v0.11.x, Lishget
+	4) Turret range/armor upgrades, 5 months ago, v0.11.x, ThaPear
+	5) Oxygen, 6 months ago, v0.11.x, Natha
+	6) PreFusion, 6 months ago, v0.11.x, matpmag
+	7) Increments, 8 months ago, v0.11.x, Justin Festa
+	8) Advanced Equipment, 12 months ago, v0.10.x-0.11.x, Darius456
+Inserters (12)
+	0) Cursed PI, 3 months ago, v0.12.x, L0771
+	1) Bucket Wheel Excavator, 4 months ago, v0.11.x-0.12.x, jorgenRe
+	2) Filter Inserter, 4 months ago, v0.12.x, laige
+	3) Fuel Farmer, 5 months ago, v0.11.x, Fentus
+	4) Smart Inserters, 5 months ago, v0.11.x, Turtle
+	5) Smart long inserters, 6 months ago, v0.11.x, Schmendrick
+	6) Inserter energy balance, 6 months ago, v0.11.x, Schmendrick
+	7) Smart Circuit Systems, 6 months ago, v0.11.x, Kikkers
+	8) Steampunk, 7 months ago, v0.11.x, christhereaper
+	9) Side Inserters, 10 months ago, v0.9.x-0.11.x, GotLag
+Transport Belts (12)
+	0) Stackers, 4 months ago, v0.11.x, dalsio
+	1) Belts Are Broken, 5 months ago, v0.11.x, Fentus
+	2) UpGrade, 5 months ago, v0.11.x, yareczek
+	3) Easy Belt Layer, 5 months ago, v0.11.x, Schmendrick
+	4) Boxing, 7 months ago, v0.11.x, Xecutor
+	5) Filtered Splitters, 9 months ago, v0.11.x, ThaPear
+	6) Belt Utilities, 9 months ago, v0.11.x, CorrettoSambuca
+	7) Teleporter Belts, 9 months ago, v0.11.x, ThaPear
+	8) Belt Switchers, 11 months ago, v0.11.x, ThaPear
+	9) UndergroundBeltsExtended aka Belts+, 12 months ago, v0.11.x, Zetsubo
+	10) Belt Blocker, about 1 year ago, v0.11.x, JamesOFarrell
+	11) Slipstream Chests, over 1 year ago, v0.11.x, Degraine
+Player (11)
+	0) Cursed Jet Pack, 3 months ago, v0.12.x, L0771
+	1) Pocket Bots Start, 4 months ago, v0.12.x, vampiricdust
+	2) More Light, 4 months ago, v0.11.x-0.12.x, JamesOFarrell
+	3) No More Bots, 5 months ago, v0.11.x, Turtle
+	4) Telepad, 8 months ago, v0.11.x, Xecutor
+	5) Items Count, 9 months ago, v0.11.x, ThaPear
+	6) Magnet, 11 months ago, v0.11.x, Schmendrick
+Transportation (11)
+	0) Cursed Underground Transport, 3 months ago, v0.11.x-0.12.x, L0771
+	1) Flying Boots, 5 months ago, v0.11.x, giodamelio
+	2) Central Boxing, 6 months ago, v0.11.x, Nagshell
+	3) RoadTrain, 7 months ago, v0.11.x, Cheata
+	4) Bridge Railway, 8 months ago, v0.11.x, MrP123
+	5) Telepad, 8 months ago, v0.11.x, Xecutor
+	6) Logistics Wagons, 9 months ago, v0.11.x, gnz
+	7) RoadWorks, 9 months ago, v0.11.x, Rahjital
+	8) Stainless Steel wagon, 11 months ago, v0.11.x-0.12.x, Rseding91
+Map (10)
+	0) Bob's mod - Ores, 2 months ago, v0.11.x-0.12.x, bobingabout
+	1) Landfill, 4 months ago, v0.11.x-0.12.x, Rseding91
+	2) Explosive Termites, 4 months ago, v0.11.x-0.12.x, Rseding91
+	3) Evolution Alien Manipulation, 6 months ago, v0.11.x, darkshadow1809
+	4) Radar 2.0, 6 months ago, v0.11.x, Schmendrick
+	5) Underground Mining Drills, 6 months ago, v0.11.x, Schmendrick
+	6) Peace Mod, 8 months ago, v0.11.x, vachu
+	7) MapConverter, 10 months ago, v0.11.x, ForFoxAche
+	8) Alien Oil, 11 months ago, v0.11.x, Rseding91
+	9) Factorio Maps, 12 months ago, v0.11.x, jeroon
+Trains (10)
+	0) Rail Tanker, 2 months ago, v0.11.x-0.12.x, JamesOFarrell
+	1) Cursed Underground Transport, 3 months ago, v0.11.x-0.12.x, L0771
+	2) Bucket Wheel Excavator, 4 months ago, v0.11.x-0.12.x, jorgenRe
+	3) The Fat Controller, 4 months ago, v0.11.x-0.12.x, JamesOFarrell
+	4) Rail Crossing, 5 months ago, v0.11.x, Kikkers
+	5) Moving Block Signals, 6 months ago, v0.11.x, JamesOFarrell
+	6) RoadTrain, 7 months ago, v0.11.x, Cheata
+	7) Bridge Railway, 8 months ago, v0.11.x, MrP123
+	8) Logistics Wagons, 9 months ago, v0.11.x, gnz
+	9) Stainless Steel wagon, 11 months ago, v0.11.x-0.12.x, Rseding91
+Endgame (9)
+	0) Equivalent Exchange, about 2 months ago, v0.12.x, matjojo
+	1) Cursed Exp, 5 months ago, v0.11.x, L0771
+	2) NARMod, 5 months ago, v0.11.x, damienreave
+	3) DyTech, 8 months ago, v0.10.x-0.11.x, Dysoch
+	4) Judgement Day, 10 months ago, v0.11.x, Adil
+	5) Infinite Research, 11 months ago, v0.11.x, oktabyte
+	6) Marathon Mod, 11 months ago, v0.11.x, bgirard
+	7) Mohole, 11 months ago, v0.11.x, starholme
+	8) Hardcorio, 4 months ago, v0.11.x, Stx3
+Defense (8)
+	0) Fort mod, 5 months ago, v0.11.x, orzelek
+	1) Tower Defense, 9 months ago, v0.11.x, prg
+	2) Electric Walls, 11 months ago, v0.11.x, Genhis
+	3) Force Fields, 11 months ago, v0.11.x, Rseding91
+	4) Replicators, 12 months ago, v0.11.x, jamuspsi
+	5) Hardcorio, 4 months ago, v0.11.x, Stx3
+Liquids (8)
+	0) Bob's Metals, Chemicals and Intermediates mod, 2 months ago, v0.12.x, bobingabout
+	1) Fluid Void, 4 months ago, v0.11.x-0.12.x, Rseding91
+	2) Clean Pipes, 9 months ago, v0.11.x, ThaPear
+	3) Steam, 11 months ago, v0.11.x, starholme
+	4) Barrel Mod, 11 months ago, v0.11.x, psychobarge
+	5) Straight Pipes, about 1 year ago, v0.11.x, JamesOFarrell
+	6) Treefarm, over 1 year ago, v0.11.x, drs9999
+Overhaul (8)
+	0) Cursed Exp, 5 months ago, v0.11.x, L0771
+	1) Increments, 8 months ago, v0.11.x, Justin Festa
+	2) D.Y.S.T.O.P.I.A., 8 months ago, v0.11.x, Voal
+	3) DyTech, 8 months ago, v0.10.x-0.11.x, Dysoch
+	4) Treefarm, over 1 year ago, v0.11.x, drs9999
+	5) F mod, N/A, N/A, ficolas
+Turrets (8)
+	0) Displaying range of turrets, 5 months ago, v0.11.x, kds71
+	1) Turret range/armor upgrades, 5 months ago, v0.11.x, ThaPear
+	2) Supreme Warfare, 5 months ago, v0.11.x, SpeedyBrain
+	3) Fort mod, 5 months ago, v0.11.x, orzelek
+	4) Flame Turrets, 6 months ago, v0.11.x, Foxy_Boxes
+	5) Artillery Cannon, 7 months ago, v0.11.x, Buhamut
+	6) D.Y.S.T.O.P.I.A., 8 months ago, v0.11.x, Voal
+	7) Tower Defense, 9 months ago, v0.11.x, prg
+Weapons (8)
+	0) Explosive Termites, 4 months ago, v0.11.x-0.12.x, Rseding91
+	1) Tanks!, 5 months ago, v0.11.x, KON_Air
+	2) Long-Range Missile Launcher, 6 months ago, v0.11.x, British_Petroleum
+	3) Quake 2 Weapons, 9 months ago, v0.11.x, HeyRevolver
+	4) ValTech Flechette Rifle, 9 months ago, v0.11.x, Valkor
+	5) Force Fields, 11 months ago, v0.11.x, Rseding91
+	6) Tankwerkz Unlimited, 12 months ago, v0.11.x, thegreyman
+	7) Hardcorio, 4 months ago, v0.11.x, Stx3
+Challenge (7)
+	0) No Hand Crafting, 5 months ago, v0.11.x, Fentus
+	1) Belts Are Broken, 5 months ago, v0.11.x, Fentus
+	2) Fuel Farmer, 5 months ago, v0.11.x, Fentus
+	3) 0craft MOD, 8 months ago, v0.11.x, Cheata
+	4) Stamina, 8 months ago, v0.11.x, Schmendrick
+	5) Reduced building stack sizes, 9 months ago, v0.11.x, Schmendrick
+	6) Tower Defense, 9 months ago, v0.11.x, prg
+Circuit Network (7)
+	0) Lua Combinators, 2 months ago, v0.12.x, JamesOFarrell
+	1) Smart Inserters, 5 months ago, v0.11.x, Turtle
+	2) Smart Circuit Systems, 6 months ago, v0.11.x, Kikkers
+	3) AlphaMod - Advanced Fluid Handling, 9 months ago, v0.11.x, Kexík
+	4) Power Switch Mod, about 1 year ago, v0.11.x, drs9999
+Big Mods (6)
+	0) Bob's mod - Ores, 2 months ago, v0.11.x-0.12.x, bobingabout
+	1) Bob's Metals, Chemicals and Intermediates mod, 2 months ago, v0.12.x, bobingabout
+	2) Cursed Exp, 5 months ago, v0.11.x, L0771
+	3) DyTech, 8 months ago, v0.10.x-0.11.x, Dysoch
+	4) Hardcorio, 4 months ago, v0.11.x, Stx3
+	5) Treefarm, over 1 year ago, v0.11.x, drs9999
+Multiplayer (6)
+	0) Visual Help, 5 months ago, v0.11.x, y.petremann
+	1) PvP with craftable Biters, 10 months ago, v0.11.x, FishSandwich
+	2) MPlayers, 12 months ago, v0.11.x, jeroon
+Environment (4)
+	0) Natural Evolution, 5 months ago, v0.11.x, TheSAguy
+	1) Treefarm, over 1 year ago, v0.11.x, drs9999
+Uncategorized (4)
+	0) Factorio Sprachverbesserung, 4 months ago, v0.11.x, Lishget
+	1) Random Stuff, 11 months ago, v0.11.x, Mackan90096
+	2) F mod, N/A, N/A, ficolas
+Devs (3)
+	0) Lua Combinators, 2 months ago, v0.12.x, JamesOFarrell
+	1) canInsert, about 1 year ago, v0.11.x, Rseding91
+Texture Packs (3)
+	0) WaiTex, about 2 months ago, v0.12.x, keyboardhack
+	1) Updated Graphics, 3 months ago, v0.11.x-0.12.x, y.petremann
+	2) D.Y.S.T.O.P.I.A., 8 months ago, v0.11.x, Voal
+Light (2)
+	0) Torches, 20 days ago, v0.12.x, Klonan
+	1) More Light, 4 months ago, v0.11.x-0.12.x, JamesOFarrell
+Campaigns (1)
+	0) Tower Defense, 9 months ago, v0.11.x, prg
+Early Game (1)
+	0) Pocket Bots Start, 4 months ago, v0.12.x, vampiricdust
+Sound (1)

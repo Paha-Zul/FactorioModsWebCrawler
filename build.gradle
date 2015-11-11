@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+    }
+}
+
+allprojects {
+
+    version = '0.1'
+    ext {
+        appName = 'FactorioModsWebCrawler'
+    }
+
+    repositories {
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+        maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+    }
+}
+
+project(":core") {
+    apply plugin: "java"
+
+    dependencies {
+        compile "org.jsoup:jsoup:1.7.2"
+    }
+}

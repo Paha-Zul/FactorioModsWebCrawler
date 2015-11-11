@@ -1,0 +1,2 @@
+rootProject.name = 'factoriomods-webcrawler'
+include "core"
