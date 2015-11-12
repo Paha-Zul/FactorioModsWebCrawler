@@ -1,9 +1,14 @@
 import javax.swing.*;
-import javax.swing.tree.DefaultMutableTreeNode;
-import javax.swing.tree.DefaultTreeModel;
-import javax.swing.tree.TreeModel;
+import javax.swing.event.ChangeEvent;
+import javax.swing.tree.*;
+import java.awt.*;
 import java.awt.event.*;
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.EventObject;
+import java.util.Vector;
 
 public class ModManagerWindow extends JDialog {
     private JPanel contentPane;
@@ -13,24 +18,19 @@ public class ModManagerWindow extends JDialog {
     private JPanel modBrowserTab;
     private JTree tree;
 
-    private String modPath = "fm/";
+    private String factorioDataPath;
+    private String factorioModPath;
+    private String factorioExecutablePath;
+    private String factorioModManagerPath = "fm/";
 
     public ModManagerWindow() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
 
-        buttonOK.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onOK();
-            }
-        });
+        buttonOK.addActionListener(e -> onOK());
 
-        buttonCancel.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        });
+        buttonCancel.addActionListener(e -> onCancel());
 
         // call onCancel() when cross is clicked
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
@@ -41,17 +41,38 @@ public class ModManagerWindow extends JDialog {
         });
 
         // call onCancel() on ESCAPE
-        contentPane.registerKeyboardAction(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+        contentPane.registerKeyboardAction(e -> onCancel(),
+                KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+
 
         init();
 
     }
 
     private void onOK() {
+        File modDir = new File(this.factorioModPath);
+        File[] currentModList = modDir.listFiles();
+
+        for(File file : currentModList){
+            if(file.getName().endsWith(".json")) continue;
+            file.setWritable(true);
+            file.delete();
+        }
+
+        File profileDir = new File(this.factorioDataPath + factorioModManagerPath + this.tree.getLastSelectedPathComponent());
+        File[] profileModList = profileDir.listFiles();
+        Profile.Mod[] mods = Profile.getModsForProfile(this.tree.getLastSelectedPathComponent()+"");
+
+        if(profileModList != null)
+            for(Profile.Mod mod : mods){
+                try {
+                    if(mod.name.equals("base")) continue;
+                    Files.copy(Paths.get(mod.filePath), modDir.toPath());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+
         // add your code here
         dispose();
     }
@@ -69,34 +90,230 @@ public class ModManagerWindow extends JDialog {
     }
 
     public void init(){
-        String factorioPath = System.getProperty("user.home") + "/AppData" + "/Roaming/Factorio/"+this.modPath+"/";
-        File modManagerDir = new File(factorioPath);
+        factorioExecutablePath = System.getenv("ProgramFiles")+"/Factorio/bin/x64/Factorio.exe";
+        if(!new File(factorioExecutablePath).exists()) {
+            factorioExecutablePath = System.getenv("ProgramFiles") + "/Factorio/bin/x86/Factorio.exe";
+            if(!new File(factorioExecutablePath).exists()){
+                //TODO Disable play button?
+            }
+        }
+
+        //The factorio data path
+        this.factorioDataPath = System.getProperty("user.home") + "/AppData" + "/Roaming/Factorio/";
+        this.factorioModPath = this.factorioDataPath + "/mods/"; //The mods path.
+        //The mod manager path.
+        String modManPath = this.factorioDataPath + this.factorioModManagerPath +"/";
+        File modManagerDir = new File(modManPath); //The actual file.
+
         if(!modManagerDir.exists())
             modManagerDir.mkdir();
         else{
             File[] files = modManagerDir.listFiles();
-            String[] profiles = new String[files.length];
             DefaultMutableTreeNode root = new DefaultMutableTreeNode("profiles");
             TreeModel model = new DefaultTreeModel(root);
 
-            for(int i=0;i<files.length;i++) {
-                profiles[i] = files[i].getName();
-                DefaultMutableTreeNode profile = new DefaultMutableTreeNode(files[i].getName());
-                root.add(profile);
+            if(files != null && files.length > 0) {
+                //For each dir under the 'fm' dir
+                for (File file : files) {
+                    DefaultMutableTreeNode profile = new DefaultMutableTreeNode(file.getName()); //Add the name to the tree.
+                    root.add(profile); //Add it.
 
-                File[] list = files[i].listFiles();
-                if(list != null)
-                    for(int k=0;k<list.length;k++){
-                        profile.add(new DefaultMutableTreeNode(list[k].getName()));
-                    }
+                    Profile _profile = new Profile(file); //Make a profile object.
+                    Profile.Mod[] mods = _profile.getMods().mods; //Get the list of Mods it detected.
+                    for (Profile.Mod mod : mods) //For each mod, add the name to the tree.
+                        profile.add(new DefaultMutableTreeNode(new CheckBoxNode(mod.name, false)));
+                }
+            }else{
+                root.add(new DefaultMutableTreeNode("Something went wrong, no files in the fm dir?"));
+
             }
 
             tree.setModel(model);
+            tree.setCellRenderer(new CheckBoxNodeRenderer());
+            tree.setCellEditor(new CheckBoxNodeEditor(tree));
+            tree.setEditable(true);
 
         }
     }
 
     private void createUIComponents() {
         // TODO: place custom component creation code here
+    }
+
+    class CheckBoxNodeRenderer implements TreeCellRenderer {
+        private JCheckBox leafRenderer = new JCheckBox();
+
+        private DefaultTreeCellRenderer nonLeafRenderer = new DefaultTreeCellRenderer();
+
+        Color selectionBorderColor, selectionForeground, selectionBackground,
+                textForeground, textBackground;
+
+        protected JCheckBox getLeafRenderer() {
+            return leafRenderer;
+        }
+
+        public CheckBoxNodeRenderer() {
+            Font fontValue;
+            fontValue = UIManager.getFont("Tree.font");
+            if (fontValue != null) {
+                leafRenderer.setFont(fontValue);
+            }
+            Boolean booleanValue = (Boolean) UIManager
+                    .get("Tree.drawsFocusBorderAroundIcon");
+            leafRenderer.setFocusPainted((booleanValue != null)
+                    && (booleanValue.booleanValue()));
+
+            selectionBorderColor = UIManager.getColor("Tree.selectionBorderColor");
+            selectionForeground = UIManager.getColor("Tree.selectionForeground");
+            selectionBackground = UIManager.getColor("Tree.selectionBackground");
+            textForeground = UIManager.getColor("Tree.textForeground");
+            textBackground = UIManager.getColor("Tree.textBackground");
+        }
+
+        public Component getTreeCellRendererComponent(JTree tree, Object value,
+                                                      boolean selected, boolean expanded, boolean leaf, int row,
+                                                      boolean hasFocus) {
+
+            Component returnValue;
+            if (leaf) {
+
+                String stringValue = tree.convertValueToText(value, selected,
+                        expanded, leaf, row, false);
+                leafRenderer.setText(stringValue);
+                leafRenderer.setSelected(false);
+
+                leafRenderer.setEnabled(tree.isEnabled());
+
+                if (selected) {
+                    leafRenderer.setForeground(selectionForeground);
+                    leafRenderer.setBackground(selectionBackground);
+                } else {
+                    leafRenderer.setForeground(textForeground);
+                    leafRenderer.setBackground(textBackground);
+                }
+
+                if ((value != null) && (value instanceof DefaultMutableTreeNode)) {
+                    Object userObject = ((DefaultMutableTreeNode) value)
+                            .getUserObject();
+                    if (userObject instanceof CheckBoxNode) {
+                        CheckBoxNode node = (CheckBoxNode) userObject;
+                        leafRenderer.setText(node.getText());
+                        leafRenderer.setSelected(node.isSelected());
+                    }
+                }
+                returnValue = leafRenderer;
+            } else {
+                returnValue = nonLeafRenderer.getTreeCellRendererComponent(tree,
+                        value, selected, expanded, leaf, row, hasFocus);
+            }
+            return returnValue;
+        }
+    }
+
+    class CheckBoxNodeEditor extends AbstractCellEditor implements TreeCellEditor {
+
+        CheckBoxNodeRenderer renderer = new CheckBoxNodeRenderer();
+
+        ChangeEvent changeEvent = null;
+
+        JTree tree;
+
+        public CheckBoxNodeEditor(JTree tree) {
+            this.tree = tree;
+        }
+
+        public Object getCellEditorValue() {
+            JCheckBox checkbox = renderer.getLeafRenderer();
+            CheckBoxNode checkBoxNode = new CheckBoxNode(checkbox.getText(),
+                    checkbox.isSelected());
+            return checkBoxNode;
+        }
+
+        public boolean isCellEditable(EventObject event) {
+            boolean returnValue = false;
+            if (event instanceof MouseEvent) {
+                MouseEvent mouseEvent = (MouseEvent) event;
+                TreePath path = tree.getPathForLocation(mouseEvent.getX(),
+                        mouseEvent.getY());
+                if (path != null) {
+                    Object node = path.getLastPathComponent();
+                    if ((node != null) && (node instanceof DefaultMutableTreeNode)) {
+                        DefaultMutableTreeNode treeNode = (DefaultMutableTreeNode) node;
+                        Object userObject = treeNode.getUserObject();
+                        returnValue = ((treeNode.isLeaf()) && (userObject instanceof CheckBoxNode));
+                    }
+                }
+            }
+            return returnValue;
+        }
+
+        public Component getTreeCellEditorComponent(JTree tree, Object value,
+                                                    boolean selected, boolean expanded, boolean leaf, int row) {
+
+            Component editor = renderer.getTreeCellRendererComponent(tree, value,
+                    true, expanded, leaf, row, true);
+
+            // editor always selected / focused
+            ItemListener itemListener = itemEvent -> {
+                if (stopCellEditing()) {
+                    fireEditingStopped();
+                }
+            };
+            if (editor instanceof JCheckBox) {
+                ((JCheckBox) editor).addItemListener(itemListener);
+            }
+
+            return editor;
+        }
+    }
+
+    class CheckBoxNode {
+        String text;
+
+        boolean selected;
+
+        public CheckBoxNode(String text, boolean selected) {
+            this.text = text;
+            this.selected = selected;
+        }
+
+        public boolean isSelected() {
+            return selected;
+        }
+
+        public void setSelected(boolean newValue) {
+            selected = newValue;
+        }
+
+        public String getText() {
+            return text;
+        }
+
+        public void setText(String newValue) {
+            text = newValue;
+        }
+
+        public String toString() {
+            return getClass().getName() + "[" + text + "/" + selected + "]";
+        }
+    }
+
+    class NamedVector extends Vector {
+        String name;
+
+        public NamedVector(String name) {
+            this.name = name;
+        }
+
+        public NamedVector(String name, Object elements[]) {
+            this.name = name;
+            for (Object element : elements) {
+                add(element);
+            }
+        }
+
+        public String toString() {
+            return "[" + name + "]";
+        }
     }
 }

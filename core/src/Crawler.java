@@ -69,6 +69,12 @@ public class Crawler {
         modInfos.add(getModInfo(filterURL, pages)); //Get the mod info from the web address.
     }
 
+    /**
+     * Gets the mod info of all mods in a category which is dictated by the URL passed in.
+     * @param url The URL of the category.
+     * @param pages The number of pages we should search into.
+     * @return An Arraylist of an array of info.
+     */
     private ArrayList<String[]> getModInfo(String url, int pages){
         Document doc;
         ArrayList<String[]> names = new ArrayList<>();
