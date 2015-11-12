@@ -7,7 +7,9 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Enumeration;
 import java.util.EventObject;
+import java.util.HashMap;
 import java.util.Vector;
 
 public class ModManagerWindow extends JDialog {
@@ -50,31 +52,65 @@ public class ModManagerWindow extends JDialog {
     }
 
     private void onOK() {
+        //Get the file for the mod directory.
         File modDir = new File(this.factorioModPath);
-        File[] currentModList = modDir.listFiles();
+        deleteAllFiles(modDir);
 
-        for(File file : currentModList){
-            if(file.getName().endsWith(".json")) continue;
-            file.setWritable(true);
-            file.delete();
+        //We get the dir of the profile of mods and get the list of files inside the dir.
+        //We get the selected node. If it's a leaf, try to get the parent (which is most likely the profile)
+        DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode)this.tree.getLastSelectedPathComponent();
+        if(selectedNode.isLeaf()) selectedNode = (DefaultMutableTreeNode)selectedNode.getParent();
+        if(!selectedNode.isRoot()) {
+            File profileDir = new File(this.factorioDataPath + factorioModManagerPath + selectedNode);
+            copyAllEnabledMods(profileDir, modDir, selectedNode);
+
+            //Run the factorio executable.
+            try {
+                Process p = Runtime.getRuntime().exec(this.factorioExecutablePath);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
 
-        File profileDir = new File(this.factorioDataPath + factorioModManagerPath + this.tree.getLastSelectedPathComponent());
-        File[] profileModList = profileDir.listFiles();
-        Profile.Mod[] mods = Profile.getModsForProfile(this.tree.getLastSelectedPathComponent()+"");
-
-        if(profileModList != null)
-            for(Profile.Mod mod : mods){
-                try {
-                    if(mod.name.equals("base")) continue;
-                    Files.copy(Paths.get(mod.filePath), modDir.toPath());
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
+        //TODO Deal with not having the right thing selected.
 
         // add your code here
         dispose();
+    }
+
+    /**
+     * Deletes all files excluding .json files in a directory.
+     * @param dir The directory to delete files in.
+     */
+    private void deleteAllFiles(File dir){
+        File[] currentModList = dir.listFiles();
+
+        for(File file : currentModList){
+            if(file.getName().endsWith(".json")) continue;
+            file.setWritable(true); //We can't delete if read only, so try and make writeable.
+            file.delete(); //Delete the file.
+        }
+    }
+
+    private void copyAllEnabledMods(File profileModDir, File factorioModDir, DefaultMutableTreeNode selectedNode){
+        //Let's copy all enabled mods!
+
+        //Get the selected node.
+        Enumeration<DefaultMutableTreeNode> children = selectedNode.children(); //Get it's children.
+        while(children.hasMoreElements()){
+            DefaultMutableTreeNode node = children.nextElement(); //Get the next element.
+            CheckBoxNode checkBox = (CheckBoxNode)node.getUserObject(); //Get the checkbox.
+            String name = checkBox.getText(); //Get the text from the checkbox.
+            if(name.equals("base") || !checkBox.isSelected()) continue; //If it is the "base" mod, ignore it (it's always on)
+
+            //Get the file with the name of the mod and then copy it from the profile dir to the mods dir.
+            File file = FileUtils.findFileWithPartName(profileModDir, ((CheckBoxNode)node.getUserObject()).getText());
+            try {
+                Files.copy(file.toPath(), Paths.get(factorioModDir.getPath()+"/"+file.getPath().substring(file.getPath().lastIndexOf('\\'))));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
     }
 
     private void onCancel() {
@@ -108,20 +144,27 @@ public class ModManagerWindow extends JDialog {
         if(!modManagerDir.exists())
             modManagerDir.mkdir();
         else{
+            HashMap<String, Boolean> enabledMods = new HashMap<>();
+
             File[] files = modManagerDir.listFiles();
             DefaultMutableTreeNode root = new DefaultMutableTreeNode("profiles");
             TreeModel model = new DefaultTreeModel(root);
 
             if(files != null && files.length > 0) {
-                //For each dir under the 'fm' dir
-                for (File file : files) {
-                    DefaultMutableTreeNode profile = new DefaultMutableTreeNode(file.getName()); //Add the name to the tree.
-                    root.add(profile); //Add it.
 
-                    Profile _profile = new Profile(file); //Make a profile object.
+                //For each dir under the 'fm' dir
+                for (File profileDir : files) {
+                    DefaultMutableTreeNode profile = new DefaultMutableTreeNode(profileDir.getName()); //Add the name to the tree.
+                    root.add(profile); //Add it.
+                    Profile.ModListJson modList = FileUtils.getJsonObject(FileUtils.findFileWithPartName(profileDir, "mod-list"), Profile.ModListJson.class);
+                    for(Profile.Mod mod : modList.mods) enabledMods.put(mod.name, mod.enabled);
+
+                    Profile _profile = new Profile(profileDir); //Make a profile object.
                     Profile.Mod[] mods = _profile.getMods().mods; //Get the list of Mods it detected.
-                    for (Profile.Mod mod : mods) //For each mod, add the name to the tree.
-                        profile.add(new DefaultMutableTreeNode(new CheckBoxNode(mod.name, false)));
+                    for (Profile.Mod mod : mods) { //For each mod, add the name to the tree.
+                        if(mod.name.equals("base")) continue;
+                        profile.add(new DefaultMutableTreeNode(new CheckBoxNode(mod.name, enabledMods.get(mod.name))));
+                    }
                 }
             }else{
                 root.add(new DefaultMutableTreeNode("Something went wrong, no files in the fm dir?"));

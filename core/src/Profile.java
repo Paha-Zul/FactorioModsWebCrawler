@@ -55,9 +55,10 @@ public class Profile {
 
         for(Mod mod : this.mods.mods) {
             if(mod.name.equals("base")) continue;
-            File file = findFileWithPartName(profileDir, mod.name);
-            mod.filePath = file.getPath();
+            File file = FileUtils.findFileWithPartName(profileDir, mod.name);
             mod.info = getModInfo(file);
+            mod.filePath = file.getPath();
+            System.out.println("mod path: "+mod.filePath);
         }
     }
 
@@ -67,16 +68,6 @@ public class Profile {
 
     public Mods getMods(){
         return this.mods;
-    }
-
-    private File findFileWithPartName(File dir, String fileName){
-        File[] list = dir.listFiles();
-        for(File file : list){
-            if(file.getName().contains(fileName))
-                return file;
-        }
-
-        return null;
     }
 
     private ModInfo getModInfo(File file){
@@ -100,6 +91,11 @@ public class Profile {
         Mods mods = Profile.modMap.get(name);
         if(mods == null) return null;
         return mods.mods;
+    }
+
+    public static class ModListJson{
+        @JsonProperty
+        public Mod[] mods;
     }
 
     public static class Mods{
