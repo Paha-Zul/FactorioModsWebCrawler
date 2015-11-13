@@ -1,7 +1,9 @@
 import javax.swing.*;
+import javax.swing.Timer;
 import javax.swing.event.ChangeEvent;
 import javax.swing.event.TreeSelectionEvent;
 import javax.swing.event.TreeSelectionListener;
+import javax.swing.table.DefaultTableModel;
 import javax.swing.tree.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -21,6 +23,8 @@ public class ModManagerWindow extends JDialog {
     private JPanel modInfoPanel;
     private JList modInfoList;
     private JPanel modListPanel;
+    private JTable browserTable;
+    private JTable testTable;
 
     private String factorioDataPath;
     private String factorioModPath;
@@ -50,6 +54,7 @@ public class ModManagerWindow extends JDialog {
                     String profileName = node.getParent().toString();
                     Profile.Mod mod = Profile.getModByNameForProfile(profileName, checkBox.getText());
 
+                    //Set up the initial mod information.
                     Object[] modInfo = {
                             "Mod Name: " + mod.name,
                             "Author: " + mod.info.author,
@@ -59,7 +64,32 @@ public class ModManagerWindow extends JDialog {
                     DefaultListModel listModel = new DefaultListModel();
                     for (Object obj : modInfo)
                         listModel.addElement(obj);
+
                     modInfoList.setModel(listModel);
+
+                    Runnable task = () -> Crawler.getVersionsOfMod(mod.name);
+                    Thread thread = new Thread(task);
+                    thread.start();
+
+                    Timer timer = new Timer(200, null);
+                    timer.addActionListener(ev -> {
+                        if(thread.getState()!=Thread.State.TERMINATED)
+                            timer.restart();
+                        else{
+                            timer.stop();
+
+                            //Get the modVersionInfo from the crawler. If not null, add to the list.
+                            String[][] modVersionInfo = Crawler.getModVersionInfo();
+                            if(modVersionInfo != null) {
+                                for (String[] info : modVersionInfo)
+                                    listModel.addElement(info[0]);
+
+                                modInfoList.setModel(listModel);
+                            }
+                            System.out.println("Done getting version");
+                        }
+                    });
+                    timer.start();
                 }
 
             }
@@ -78,7 +108,7 @@ public class ModManagerWindow extends JDialog {
                 KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
 
         tabs.addChangeListener((ChangeEvent e) -> {
-            if(tabs.getSelectedComponent().getName().equals("browser")){
+            if(tabs.getSelectedComponent().getName() != null && tabs.getSelectedComponent().getName().equals("browser")){
                 Runnable task = () -> Crawler.processFilter("http://www.factoriomods.com/recently-updated", 1);
                 Thread thread = new Thread(task);
                 thread.start();
@@ -90,6 +120,12 @@ public class ModManagerWindow extends JDialog {
                         System.out.println("Done with page");
                         timer.stop();
 
+                        ArrayList<String[]> modInfoListFromBrowser = Crawler.getSpecificFilterModsInfo();
+                        DefaultTableModel model = new DefaultTableModel(new String[]{"","","",""}, 0);
+                        for(String[] info : modInfoListFromBrowser)
+                            model.addRow(info);
+
+                        browserTable.setModel(model);
                     }
                 });
 
