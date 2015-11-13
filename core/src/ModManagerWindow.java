@@ -1,9 +1,8 @@
 import javax.swing.*;
 import javax.swing.Timer;
 import javax.swing.event.ChangeEvent;
-import javax.swing.event.TreeSelectionEvent;
-import javax.swing.event.TreeSelectionListener;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.text.Element;
 import javax.swing.tree.*;
 import java.awt.*;
 import java.awt.event.*;
@@ -24,7 +23,6 @@ public class ModManagerWindow extends JDialog {
     private JList modInfoList;
     private JPanel modListPanel;
     private JTable browserTable;
-    private JTable testTable;
 
     private String factorioDataPath;
     private String factorioModPath;
@@ -45,54 +43,60 @@ public class ModManagerWindow extends JDialog {
 
         buttonCancel.addActionListener(e -> onCancel());
 
-        tree.addTreeSelectionListener(new TreeSelectionListener() {
-            @Override
-            public void valueChanged(TreeSelectionEvent e) {
-                DefaultMutableTreeNode node = (DefaultMutableTreeNode) e.getPath().getLastPathComponent();
-                if (node.isLeaf() && node.getUserObject() instanceof CheckBoxNode) {
-                    CheckBoxNode checkBox = (CheckBoxNode) node.getUserObject();
-                    String profileName = node.getParent().toString();
-                    Profile.Mod mod = Profile.getModByNameForProfile(profileName, checkBox.getText());
+        //An event that happens when we select something in the tree.
+        tree.addTreeSelectionListener(e -> {
+            DefaultMutableTreeNode node = (DefaultMutableTreeNode) e.getPath().getLastPathComponent();
 
-                    //Set up the initial mod information.
-                    Object[] modInfo = {
-                            "Mod Name: " + mod.name,
-                            "Author: " + mod.info.author,
-                            "Version: " + mod.info.version,
-                    };
+            //Gotta make sure it's a leaf AND a checkbox
+            if (node.isLeaf() && node.getUserObject() instanceof CheckBoxNode) {
+                //Get the checkbox (for its value) and the profile name. Get the actual mod with this.
+                CheckBoxNode checkBox = (CheckBoxNode) node.getUserObject();
+                String profileName = node.getParent().toString();
+                Profile.Mod mod = Profile.getModByNameForProfile(profileName, checkBox.getText());
 
-                    DefaultListModel listModel = new DefaultListModel();
-                    for (Object obj : modInfo)
-                        listModel.addElement(obj);
+                //Set up the initial mod information.
+                Object[] modInfo = {
+                        "Mod Name: " + mod.name,
+                        "Author: " + mod.info.author,
+                        "Version: " + mod.info.version,
+                };
 
-                    modInfoList.setModel(listModel);
+                //Set the list model.
+                DefaultListModel listModel = new DefaultListModel();
+                for (Object obj : modInfo)
+                    listModel.addElement(obj);
+                modInfoList.setModel(listModel);
 
-                    Runnable task = () -> Crawler.getVersionsOfMod(mod.name);
-                    Thread thread = new Thread(task);
-                    thread.start();
+                //Here we set a thread task to get the version numbers for the mod. This will look at the site
+                //and search for the mod, then pull all versions from it.
+                Runnable task = () -> Crawler.getVersionsOfMod(mod.name);
+                Thread thread = new Thread(task);
+                thread.start();
 
-                    Timer timer = new Timer(200, null);
-                    timer.addActionListener(ev -> {
-                        if(thread.getState()!=Thread.State.TERMINATED)
-                            timer.restart();
-                        else{
-                            timer.stop();
+                //Our timer that checks every 200ms if the thread has finished.
+                Timer timer = new Timer(200, null);
+                timer.addActionListener(ev -> {
+                    if(thread.getState()!=Thread.State.TERMINATED)
+                        timer.restart();
+                    else{
+                        timer.stop();
 
-                            //Get the modVersionInfo from the crawler. If not null, add to the list.
-                            String[][] modVersionInfo = Crawler.getModVersionInfo();
-                            if(modVersionInfo != null) {
-                                for (String[] info : modVersionInfo)
-                                    listModel.addElement(info[0]);
-
-                                modInfoList.setModel(listModel);
+                        //Get the modVersionInfo from the crawler. If not null, add to the list.
+                        String[][] modVersionInfo = Crawler.getModVersionInfo();
+                        if(modVersionInfo != null) {
+                            listModel.addElement("Recent Versions:");
+                            for (String[] info : modVersionInfo) {
+                                listModel.addElement("    v" + info[0] + " for " + info[1]);
                             }
-                            System.out.println("Done getting version");
+                        }else{
+                            listModel.addElement("Couldn't find the mod on the website.");
                         }
-                    });
-                    timer.start();
-                }
-
+                        modInfoList.setModel(listModel);
+                    }
+                });
+                timer.start();
             }
+
         });
 
         // call onCancel() when cross is clicked

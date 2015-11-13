@@ -27,5 +27,6 @@ project(":core") {
         compile "org.jsoup:jsoup:1.7.2"
         compile "com.fasterxml.jackson.core:jackson-core:2.6.3"
         compile "com.fasterxml.jackson.core:jackson-databind:2.6.3"
+        compile "commons-io:commons-io:2.4"
     }
 }

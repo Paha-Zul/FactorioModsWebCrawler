@@ -90,6 +90,7 @@ public class Crawler {
     public static String[][] getVersionsOfMod(String modName){
         int magic = 5;
         String[][] modInfo = null;
+        modName = modName.replaceAll("(\\p{Ll})(\\p{Lu})","$1 $2");
         String searchPath = websiteURL + "/recently-updated?v=&q=" + modName.replaceAll(" ", "+");
         Document doc = null;
         try {
@@ -106,7 +107,13 @@ public class Crawler {
             int i=0; //counter
 
             while(colIter.hasNext()){
-                modInfo[i/magic][i%magic] = colIter.next().text();
+                Element next = colIter.next();
+                if(i%magic == 2){
+                    modInfo[i/magic][i%magic] = next.getElementsByAttribute("href").first().attr("href");
+                }else if(i%magic == 3){
+                    modInfo[i/magic][i%magic] = "Install";
+                }else
+                    modInfo[i/magic][i%magic] = next.text();
                 i++;
             }
 
