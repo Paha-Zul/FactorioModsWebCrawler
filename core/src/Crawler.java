@@ -15,10 +15,16 @@ import java.util.ArrayList;
  */
 public class Crawler {
 
-    private volatile String[] filterNames;
-    private volatile ArrayList<ArrayList<String[]>> modInfos = new ArrayList<>();
+    private static volatile String[] filterNames;
+    private static volatile ArrayList<ArrayList<String[]>> modInfos = new ArrayList<>();
+    private static volatile ArrayList<String[]> specificFilterModsInfo = new ArrayList<>();
 
-    private ArrayList<ArrayList<String[]>> processPage(String url, boolean multi){
+    public static void main(String[] args){
+        //processPage("http://www.factoriomods.com/", false);
+        processFilter("http://www.factoriomods.com/recently-updated", 1);
+    }
+
+    public static ArrayList<ArrayList<String[]>> processPage(String url, boolean multi){
         Document doc = null;
         int i=0;
         Thread[] threads = null;
@@ -35,11 +41,11 @@ public class Crawler {
                 //If we are trying to multithread, then call it on a thread
                 if(multi) {
                     final int k = i;
-                    Runnable task2 = () -> getModsInFilter(filter, k, 99999);
+                    Runnable task2 = () -> getModsInFilter(filter, k, 1);
                     threads[i] = new Thread(task2);
                     threads[i].start();
                 }else{
-                    getModsInFilter(filter, i, 99999);
+                    getModsInFilter(filter, i, 1);
                 }
 
                 i++;
@@ -58,15 +64,24 @@ public class Crawler {
             }
         }
 
-        printToFile(filterNames, modInfos);
+        //printToFile(filterNames, modInfos);
 
         return modInfos;
     }
 
-    private void getModsInFilter(Element filter, int index, int pages){
+    public static ArrayList<String[]> processFilter(String URL, int pages){
+        specificFilterModsInfo = getListOfModInfo(URL, pages);
+        return specificFilterModsInfo;
+    }
+
+    public static ArrayList<String[]> getSpecificFilterModsInfo(){
+        return specificFilterModsInfo;
+    }
+
+    private static void getModsInFilter(Element filter, int index, int pages){
         String filterURL = filter.child(0).attr("abs:href"); //Get the absolute address for the filter.
         filterNames[index] = filter.child(0).text(); //Get the filter name "ie: science"
-        modInfos.add(getModInfo(filterURL, pages)); //Get the mod info from the web address.
+        modInfos.add(getListOfModInfo(filterURL, pages)); //Get the mod info from the web address.
     }
 
     /**
@@ -75,7 +90,7 @@ public class Crawler {
      * @param pages The number of pages we should search into.
      * @return An Arraylist of an array of info.
      */
-    private ArrayList<String[]> getModInfo(String url, int pages){
+    private static ArrayList<String[]> getListOfModInfo(String url, int pages){
         Document doc;
         ArrayList<String[]> names = new ArrayList<>();
         int i = 0;
@@ -123,10 +138,18 @@ public class Crawler {
                 i++;
             }
 
+            /*
+                This area will take us to the next page if one exists and our 'pages' variable allows us to.
+             */
+
             Elements nextButtons = doc.select("[rel=next"); //Get all the 'mod' elements
             for(Element next : nextButtons){
-                if (next.text().contains("Next"))
-                    names.addAll(getModInfo(next.attr("abs:href"), pages));
+                if (next.text().contains("Next")) {
+                    String nextPage = next.attr("abs:href");
+                    String sub = nextPage.substring(nextPage.lastIndexOf('=')+1);
+                    if(Integer.parseInt(sub) < pages)
+                        names.addAll(getListOfModInfo(next.attr("abs:href"), pages));
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -135,7 +158,7 @@ public class Crawler {
         return names;
     }
 
-    private void printToFile(String[] filterNames, ArrayList<ArrayList<String[]>> modInfos){
+    private static void printToFile(String[] filterNames, ArrayList<ArrayList<String[]>> modInfos){
         PrintWriter writer = null;
         try {
             writer = new PrintWriter("modlist.txt", "UTF-8");

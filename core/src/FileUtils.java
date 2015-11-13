@@ -46,4 +46,13 @@ public class FileUtils {
 
         return null;
     }
+
+    public static void writeObjectToJson(File file, Object object){
+        try {
+            mapper.writerWithDefaultPrettyPrinter().writeValue(file, object);
+           // mapper.writeValue(file, object);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }

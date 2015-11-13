@@ -5,7 +5,10 @@
     <constraints>
       <xy x="48" y="54" width="541" height="410"/>
     </constraints>
-    <properties/>
+    <properties>
+      <minimumSize width="100" height="100"/>
+      <preferredSize width="400" height="400"/>
+    </properties>
     <border type="none"/>
     <children>
       <grid id="94766" layout-manager="GridLayoutManager" row-count="1" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
@@ -57,7 +60,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <tabbedpane id="59046" binding="modListTab">
+          <tabbedpane id="59046" binding="tabs">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
                 <preferred-size width="200" height="200"/>
@@ -68,19 +71,23 @@
             </properties>
             <border type="none"/>
             <children>
-              <grid id="636b3" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="636b3" binding="modListPanel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <tabbedpane title="ModList"/>
                 </constraints>
-                <properties/>
+                <properties>
+                  <name value="list"/>
+                </properties>
                 <border type="none"/>
                 <children>
                   <scrollpane id="8014b">
                     <constraints>
-                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <enabled value="true"/>
+                    </properties>
                     <border type="none"/>
                     <children>
                       <component id="b2aa1" class="javax.swing.JTree" binding="tree">
@@ -93,23 +100,39 @@
                       </component>
                     </children>
                   </scrollpane>
+                  <vspacer id="663f6">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
+                  <grid id="cfd59" binding="modInfoPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                    <border type="none"/>
+                    <children>
+                      <component id="7e9f8" class="javax.swing.JList" binding="modInfoList">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                            <preferred-size width="150" height="50"/>
+                          </grid>
+                        </constraints>
+                        <properties/>
+                      </component>
+                    </children>
+                  </grid>
                 </children>
               </grid>
-              <grid id="76f67" binding="modBrowserTab" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+              <grid id="76f67" binding="modBrowserPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                 <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
                   <tabbedpane title="Mod Browser"/>
                 </constraints>
-                <properties/>
-                <border type="none"/>
-                <children/>
-              </grid>
-              <grid id="870d8" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                <margin top="0" left="0" bottom="0" right="0"/>
-                <constraints>
-                  <tabbedpane title="Untitled"/>
-                </constraints>
-                <properties/>
+                <properties>
+                  <name value="browser"/>
+                </properties>
                 <border type="none"/>
                 <children/>
               </grid>
