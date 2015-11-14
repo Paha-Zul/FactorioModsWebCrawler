@@ -90,7 +90,7 @@
                     </properties>
                     <border type="none"/>
                     <children>
-                      <component id="b2aa1" class="javax.swing.JTree" binding="tree">
+                      <component id="b2aa1" class="javax.swing.JTree" binding="modTree">
                         <constraints/>
                         <properties>
                           <editable value="false"/>

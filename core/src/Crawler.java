@@ -17,6 +17,32 @@ import java.util.Iterator;
 public class Crawler {
     public static final int NAME=0, DATE=1, VERSION=2, AUTHOR=3;
 
+    public enum ModInfo {
+        NAME(0), DATE(1), VERSION(2), AUTHOR(3);
+
+        private final int value;
+        private ModInfo(int value) {
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
+    }
+
+    public enum ModVersionInfo {
+        VERSION(0), FACT_VERSION(1), DOWNLOAD(2), INSTALL(3), RELEASE(4);
+
+        private final int value;
+        private ModVersionInfo(int value) {
+            this.value = value;
+        }
+
+        public int getValue() {
+            return value;
+        }
+    }
+
     private static String websiteURL = "http://www.factoriomods.com";
     private static volatile String[] filterNames;
     private static volatile ArrayList<ArrayList<String[]>> modInfos = new ArrayList<>();
@@ -26,7 +52,7 @@ public class Crawler {
     public static void main(String[] args){
         //processPage("http://www.factoriomods.com/", false);
         //processFilter("http://www.factoriomods.com/recently-updated", 1);
-        getVersionsOfMod("Ore_Expansion");
+        readVersionInfoOfMod("Ore_Expansion");
     }
 
     public static ArrayList<ArrayList<String[]>> processPage(String url, boolean multi){
@@ -87,16 +113,23 @@ public class Crawler {
         return modVersionInfo;
     }
 
-    public static String[][] getVersionsOfMod(String modName){
+    /**
+     * Searches the site for the mod with 'modName' and attempts to gather its version information,
+     * which will be stored in modVersionInfo
+     * @param modName
+     */
+    public static void readVersionInfoOfMod(String modName){
         int magic = 5;
         String[][] modInfo = null;
         modName = modName.replaceAll("(\\p{Ll})(\\p{Lu})","$1 $2");
         String searchPath = websiteURL + "/recently-updated?v=&q=" + modName.replaceAll(" ", "+");
         Document doc = null;
+        modVersionInfo = null;
+
         try {
             doc = Jsoup.connect(searchPath).timeout(1000).get(); //Get the search page
             Element modTitle = doc.select(".mod-title").first(); //Get the mod titles.
-            if(modTitle == null) return modVersionInfo = null; //If we couldn't find any mods, reutrn null;
+            if(modTitle == null) return;
 
             Element modLink = modTitle.getElementsByAttribute("href").first(); //Get the mod link
             Document modDoc = Jsoup.connect(modLink.attr("abs:href")).timeout(1000).get(); //Get the mod page
@@ -121,7 +154,7 @@ public class Crawler {
             e.printStackTrace();
         }
 
-        return modVersionInfo = modInfo;
+        modVersionInfo = modInfo;
     }
 
     private static void getModsInFilter(Element filter, int index, int pages){
@@ -154,7 +187,7 @@ public class Crawler {
 
                 //For each .mod-title class, get the href link and get its text. This will be the name of the mod.
                 for(Element title : modTitle) {
-                    infoString[NAME] = title.text();
+                    infoString[ModInfo.NAME.getValue()] = title.text();
                 }
 
                 //Get the last time it was updated
@@ -163,19 +196,19 @@ public class Crawler {
                 //For each .mod-info class, get some vital info.
                 for(Element info : modInfo) {
                     Elements dates = info.getElementsByAttribute("datetime");
-                    infoString[DATE] = "N/A";
+                    infoString[ModInfo.DATE.getValue()] = "N/A";
                     for(Element date : dates)
-                        infoString[DATE] = date.text();
+                        infoString[ModInfo.DATE.getValue()] = date.text();
 
                     Element version = info.child(2);
-                    infoString[VERSION] = "N/A";
-                    if(version.children().size() > 0) infoString[VERSION] = version.child(0).text(); //Version
+                    infoString[ModInfo.VERSION.getValue()] = "N/A";
+                    if(version.children().size() > 0) infoString[ModInfo.VERSION.getValue()] = version.child(0).text(); //Version
 
                     Elements authors = info.getElementsByAttribute("href");
-                    infoString[AUTHOR] = "N/A";
+                    infoString[ModInfo.AUTHOR.getValue()] = "N/A";
                     for(Element author : authors)
                         if(author.attr("href").contains("authors")) {
-                            infoString[AUTHOR] = author.text();
+                            infoString[ModInfo.AUTHOR.getValue()] = author.text();
                             break;
                         }
                 }
