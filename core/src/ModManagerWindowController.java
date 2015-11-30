@@ -39,6 +39,7 @@ public class ModManagerWindowController {
             if(!new File(factorioExecutablePath).exists()){
                 //TODO Disable play button?
                 System.out.println("Couldn't get a path to factorio.exe");
+                factorioExecutablePath = "";
             }
         }
 
@@ -52,14 +53,25 @@ public class ModManagerWindowController {
         this.model.setPaths(factorioDataPath, factorioModPath, factorioExecutablePath, factorioModManagerPath);
     }
 
-    public void launchFactorio(DefaultMutableTreeNode lastSelected){
+    /**
+     * Launches factorio with the current mods selected.
+     * @param lastSelected The last selected TreeNode.
+     */
+    public boolean launchFactorio(DefaultMutableTreeNode lastSelected){
+        if(this.model.getFactorioExecutablePath().isEmpty()){
+            System.out.println("Couldn't launch factorio, invalid executable path.");
+            return false;
+        }
+
+        if(lastSelected == null) return false;
+
         //Get the file for the mod directory.
         File modDir = new File(this.model.getFactorioModPath());
         FileUtils.deleteAllFiles(modDir);
 
         //We get the dir of the profile of mods and get the list of files inside the dir.
         //We get the selected node. If it's a leaf, try to get the parent (which is most likely the profile)
-        if(lastSelected.isLeaf()) lastSelected = (DefaultMutableTreeNode)lastSelected.getParent();
+        if(lastSelected.isLeaf() && !((DefaultMutableTreeNode)lastSelected.getParent()).isRoot()) lastSelected = (DefaultMutableTreeNode)lastSelected.getParent();
 
         File profileDir = null;
         if(!lastSelected.isRoot()) {
@@ -75,10 +87,16 @@ public class ModManagerWindowController {
         }
 
         //TODO Deal with not having the right thing selected.
+        if(profileDir == null){
+            System.out.println("Invalid profile selected, can't execute.");
+            return false;
+        }
 
         //writeModsToJson(FileUtils.findFileWithPartName(profileDir, "mod-list.json"), modListMap.get(profileDir.getName()));
         Profile selectedProfile = this.model.getModProfileMap().get(profileDir.getName());
         selectedProfile.writeModListToJson(lastSelected.children());
+
+        return true;
     }
 
     public TreeModel initModList(){
@@ -146,9 +164,14 @@ public class ModManagerWindowController {
             String path = this.model.getFactorioModManagerPath() + this.model.getCurrentlySelectedProfile()+"/"
                     + this.model.getCurrentlySelectedModName()+"_"+info[selectedIndex][Crawler.ModVersionInfo.VERSION.getValue()]+".zip";
 
+            //TODO Who knows, this doesn't work. Downloads empty file.
             //Create a new file and try to download into it.
             File file = new File(path);
             try {
+                //URL url = new URL(info[selectedIndex][Crawler.ModVersionInfo.DOWNLOAD.getValue()]);
+                //HttpURLConnection con = (HttpURLConnection)url.openConnection();
+                //InputStream stream = con.getInputStream();
+                //Files.copy(stream, Paths.get(path));
                 org.apache.commons.io.FileUtils.copyURLToFile(new URL(info[selectedIndex][Crawler.ModVersionInfo.DOWNLOAD.getValue()]), file, 2000, 2000);
             } catch (IOException e) {
                 e.printStackTrace();
@@ -224,7 +247,7 @@ public class ModManagerWindowController {
     public void getRecentVersionsOfModAsync(Profile.Mod mod, JList modInfoList){
         //Here we set a thread task to get the version numbers for the mod. This will look at the site
         //and search for the mod, then pull all versions from it.
-        Runnable task = () -> Crawler.readVersionInfoOfMod(mod.name);
+        Runnable task = () -> Crawler.readVersionInfoOfMod(mod.nameWithoutVersion);
         Thread thread = new Thread(task);
         thread.start();
 

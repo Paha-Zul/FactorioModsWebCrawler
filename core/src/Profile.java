@@ -29,6 +29,10 @@ public class Profile {
         mapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
     }
 
+    /**
+     * Handles grabbing all the individual mods from the profile's dir and loading holding them.
+     * @param profileDir The File directory where the mods are.
+     */
     public Profile(File profileDir){
         this.filePath = profileDir;
         this.fileName = filePath.getPath().substring(filePath.getPath().lastIndexOf('/')+1);
@@ -44,13 +48,20 @@ public class Profile {
             if(file.getName().endsWith(".json"))
                 this.modListJsonFile = file;
             else{
-                String fileNameWithoutVersion = file.getName().substring(0, file.getName().lastIndexOf('_'));
+                String fileNameWithoutVersion = "";
+                String fileNameWithVersion = file.getName();
+
+                int index = file.getName().lastIndexOf('_');    //Index of the last _
+                if(file.getName().substring(index+1, file.getName().length()).matches("[\\d+.]+.*"))
+                    fileNameWithoutVersion = file.getName().substring(0, index);
+
                 ModInfo info = getModInfo(file);
-                if(info == null) continue;                  //Not a mod?
-                Mod mod = new Mod(fileNameWithoutVersion, true);    //Make a new mod.
+                if(info == null) continue;                          //Not a mod?
+                Mod mod = new Mod(fileNameWithVersion, true);       //Make a new mod.
                 mod.filePath = file.getPath();
-                this.mods.mods.add(mod);                    //We'll set to true for now.
-                this.modMap.put(fileNameWithoutVersion, mod); //Put it in the mod map.
+                mod.nameWithoutVersion = fileNameWithoutVersion;    //Keep the name without the version
+                this.mods.mods.add(mod);                            //We'll set to true for now.
+                this.modMap.put(fileNameWithVersion, mod);          //Put it in the mod map.
             }
         }
 
@@ -145,6 +156,8 @@ public class Profile {
     public static class Mod{
         @JsonProperty
         public String name;
+        @JsonIgnore
+        public String nameWithoutVersion;
         @JsonIgnore
         public String filePath;
         @JsonProperty

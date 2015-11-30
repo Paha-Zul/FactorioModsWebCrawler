@@ -82,9 +82,8 @@ public class ModManagerWindow extends JDialog {
     }
 
     private void onOK() {
-        this.windowController.launchFactorio((DefaultMutableTreeNode) this.modTree.getLastSelectedPathComponent());
-        // add your code here
-        dispose();
+        if(this.windowController.launchFactorio((DefaultMutableTreeNode) this.modTree.getLastSelectedPathComponent()))
+            dispose();
     }
 
     private void onCancel() {
