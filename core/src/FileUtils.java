@@ -55,4 +55,19 @@ public class FileUtils {
             e.printStackTrace();
         }
     }
+
+    /**
+     * Deletes all files excluding .json files in a directory.
+     * @param dir The directory to delete files in.
+     */
+    public static void deleteAllFiles(File dir){
+        File[] fileList = dir.listFiles();
+
+        for(File file : fileList){
+            if(file.getName().endsWith(".json")) continue;
+            file.setWritable(true); //We can't delete if read only, so try and make writeable.
+            if(!file.delete())      //Delete the file.
+                System.out.println("Something went wrong, the file "+file.getName()+" couldn't be deleted.");
+        }
+    }
 }

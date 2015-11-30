@@ -106,7 +106,7 @@ public class Profile {
         return null;
     }
 
-    public void writeModList(Enumeration<DefaultMutableTreeNode> children){
+    public void writeModListToJson(Enumeration<DefaultMutableTreeNode> children){
         this.mods.mods = new ArrayList<>();
         this.mods.mods.add(new Mod("base", true)); //Hack the base mod into here.
 
